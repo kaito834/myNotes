@@ -39,3 +39,10 @@ IdentityFile ~/.ssh/id_rsa
 IdentityFile ~/.ssh/id_rsa.hoge
 IdentityFile ~/.ssh/id_rsa.foo
 ```
+
+## Appendix 2. How do I know SSH host key on Web services
+- GitHub
+  - "[_What are GitHub's SSH key fingerprints?_](https://help.github.com/articles/what-are-github-s-ssh-key-fingerprints/)" on GitHub Help shows me its SSH host key.
+- Amazon EC2
+  - According to [Amazon EC2 document](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html), I can know SSH host key on each EC2 instances by AWS CLI or Amazon EC2 CLI.
+  - Or, according to [WinSCP document](http://winscp.net/eng/docs/guide_amazon_ec2), I can know SSH host key on _Instances_ page of Amazon EC2 console.
