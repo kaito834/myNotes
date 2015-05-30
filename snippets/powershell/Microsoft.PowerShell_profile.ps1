@@ -5,7 +5,7 @@
 # https://technet.microsoft.com/ja-jp/scriptcenter/powershell_owner05.aspx#EEAA (in Japanese)
 # Run Set-ExecutionPolicy cmdlet on powershell prompt as administrator
 # Set-ExecutionPolicy RemoteSigned
-# 
+#
 # tested by PowerShell 4.0 on Windows 8.1
 
 
@@ -41,16 +41,27 @@ function guid(){
 }
 
 
-# We need to Powershell 4.0 or later version to use Get-FileHash cmdlet.
+# If Get-FileHash cmdlet exists, this function computes hash by the cmdlet.
+# And, if not, computes hash by System.Security.Cryptography.MD5 instance.
 # https://technet.microsoft.com/en-us/library/dn520872.aspx
 # http://d.hatena.ne.jp/kaito834/20140208/1391869073
 function md5sum(){
-	#Get-FileHash $args[0] -Algorithm MD5 | Format-List
-	# https://technet.microsoft.com/ja-JP/library/dd315291.aspx#sectionSection2
-	Get-FileHash $args[0] -Algorithm MD5 | Select-Object -Expandproperty hash
+	# http://stackoverflow.com/questions/3919798/how-to-check-if-a-cmdlet-exists-in-powershell-at-runtime-via-script
+	# http://blogs.msdn.com/b/kebab/archive/2013/06/09/an-introduction-to-error-handling-in-powershell.aspx
+	if (Get-Command -Name Get-FileHash -ErrorAction SilentlyContinue) {
+		#Get-FileHash $args[0] -Algorithm MD5 | Format-List
+		# https://technet.microsoft.com/ja-JP/library/dd315291.aspx#sectionSection2
+		Get-FileHash $args[0] -Algorithm MD5 | Select-Object -Expandproperty hash
+	}else{
+		[string]::concat(([security.cryptography.MD5]::create().computehash((Get-Item $args[0]).openread())|ForEach-Object {$_.toString('X2')}))
+	}
 }
 
 function sha1sum(){
-	#Get-FileHash $args[0] -Algorithm SHA1 | Format-List
-	Get-FileHash $args[0] -Algorithm SHA1 | Select-Object -Expandproperty hash
+	if (Get-Command -Name Get-FileHash -ErrorAction SilentlyContinue) {
+		#Get-FileHash $args[0] -Algorithm SHA1 | Format-List
+		Get-FileHash $args[0] -Algorithm SHA1 | Select-Object -Expandproperty hash
+	}else{
+		[string]::concat(([security.cryptography.SHA1]::create().computehash((Get-Item $args[0]).openread())|ForEach-Object {$_.toString('X2')}))
+	}
 }
