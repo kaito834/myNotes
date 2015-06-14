@@ -6,6 +6,8 @@
 # Run Set-ExecutionPolicy cmdlet on powershell prompt as administrator
 # Set-ExecutionPolicy RemoteSigned
 #
+# type ". $profile", then this profile will be reloaded
+#
 # tested by PowerShell 4.0 on Windows 8.1
 
 
@@ -65,3 +67,11 @@ function sha1sum(){
 		[string]::concat(([security.cryptography.SHA1]::create().computehash((Get-Item $args[0]).openread())|ForEach-Object {$_.toString('X2')}))
 	}
 }
+
+### TBD(To Be Determined)
+# Convert Unix time(POSIX time or Epoch time) to date and time, and vice versa.
+# http://laurentschneider.com/wordpress/2012/03/powershell-and-dates.html
+#
+# Compress some files or directories into Zip format.
+# Or, uncompress Zip file.
+# http://tech.guitarrapc.com/entry/2013/10/07/083837 (in Japanese)
