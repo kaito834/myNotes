@@ -68,6 +68,21 @@ function sha1sum(){
 	}
 }
 
+# Run command as administrator priviledge like sudo, linux command
+# http://mimumimu.net/blog/2014/12/11/windows-%E3%81%A7-sudo-%E3%81%AA%E3%81%93%E3%81%A8%E3%82%92%E3%81%99%E3%82%8B%E3%80%82/ (in Japanese)
+function sudo(){
+	# https://technet.microsoft.com/library/hh849848.aspx
+	if( $args.length -ge 1 ){
+		Start-Process $args[0] -Verb runas -ArgumentList $args[1 .. $args.length]
+	}else{
+		Start-Process $args[0] -Verb runas
+	}
+
+	# FYI: Convert System.object[] to System.String
+	# https://msdn.microsoft.com/library/dd988350.aspx
+	# [string]::Join(' ', $args[1 .. $args.length])
+}
+
 ### TBD(To Be Determined)
 # Convert Unix time(POSIX time or Epoch time) to date and time, and vice versa.
 # http://laurentschneider.com/wordpress/2012/03/powershell-and-dates.html
