@@ -83,6 +83,15 @@ function sudo(){
 	# [string]::Join(' ', $args[1 .. $args.length])
 }
 
+# Get Epoch time(aka Unix time or POSIX time)
+# http://www.epochconverter.com/
+# http://laurentschneider.com/wordpress/2012/03/powershell-and-dates.html
+function getEpoch(){
+	# https://technet.microsoft.com/en-us/magazine/2007.03.powershell.aspx
+	# See "[string]$var = 5", "Variable Confusion"
+	[int][double]::Parse((Get-Date (Get-Date).touniversaltime() -UFormat %s))
+}
+
 ### TBD(To Be Determined)
 # Convert Unix time(POSIX time or Epoch time) to date and time, and vice versa.
 # http://laurentschneider.com/wordpress/2012/03/powershell-and-dates.html
