@@ -92,10 +92,21 @@ function getEpoch(){
 	[int][double]::Parse((Get-Date (Get-Date).touniversaltime() -UFormat %s))
 }
 
+# Convert Epoch time to date and time
+# http://www.epochconverter.com/
+function convertEpochToDateAndTime(){
+	# UTC
+	# https://msdn.microsoft.com/library/system.datetime.aspx
+	# https://msdn.microsoft.com/library/system.datetimekind.aspx
+	$datetime=[datetime]::SpecifyKind([datetime]'1/1/1970', [datetimekind]::Utc).AddSeconds($args[0])
+	Write-Host('UTC:	', $datetime)
+
+	# Local
+	$datetime = [timezone]::CurrentTimeZone.ToLocalTime($datetime)
+	Write-Host('Local:	', $datetime)
+}
+
 ### TBD(To Be Determined)
-# Convert Unix time(POSIX time or Epoch time) to date and time, and vice versa.
-# http://laurentschneider.com/wordpress/2012/03/powershell-and-dates.html
-#
 # Compress some files or directories into Zip format.
 # Or, uncompress Zip file.
 # http://tech.guitarrapc.com/entry/2013/10/07/083837 (in Japanese)
