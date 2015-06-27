@@ -8,8 +8,16 @@ import json
 
 # https://docs.python.org/3/library/urllib.request.html#examples
 # https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html
+# https://docs.python.org/3.4/howto/urllib2.html#id6
+proxyhandler = urllib.request.ProxyHandler({'http': 'http://127.0.0.1:8080/', 'https': 'https://127.0.0.1:8080/'})
+opener = urllib.request.build_opener(proxyhandler)
+urllib.request.install_opener(opener)
 res = urllib.request.urlopen('https://ip-ranges.amazonaws.com/ip-ranges.json')
 res_body = res.read()
+
+# By the way, you can use environment variables http_proxy or https_proxy when access web site/service via proxy.
+# set http_proxy=http://127.0.0.1:8080/
+# set https_proxy=https://127.0.0.1:8080/
 
 # https://docs.python.org/3/library/json.html
 j = json.loads(res_body.decode("utf-8"))

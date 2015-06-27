@@ -7,9 +7,11 @@ import urllib.request
 import getpass
 
 # If you access to url below via Proxy,
-# set environment variable 'http_proxy' before execute this.
+# you can use environment variable 'http_proxy' without urllib.request.ProxyHandler.
 # And, url scheme is https, then 'https_proxy' must be set instead of 'http_proxy'
 url = 'http://192.168.0.1/'
+# https://docs.python.org/3.4/howto/urllib2.html#id6
+proxyhandler = urllib.request.ProxyHandler({'http': 'http://127.0.0.1:8080/', 'https': 'https://127.0.0.1:8080/'})
 
 # https://docs.python.org/3/library/functions.html#input
 # https://docs.python.org/3/library/getpass.html
@@ -23,7 +25,7 @@ auth_passwd=getpass.getpass('Password: ')
 passman = urllib.request.HTTPPasswordMgrWithDefaultRealm()
 passman.add_password(None, url, auth_user, auth_passwd)
 authhandler = urllib.request.HTTPBasicAuthHandler(passman)
-opener = urllib.request.build_opener(authhandler)
+opener = urllib.request.build_opener(authhandler, proxyhandler)
 urllib.request.install_opener(opener)
 
 # I can get http.client.HTTPResponse object in variable 'res'
