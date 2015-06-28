@@ -19,6 +19,7 @@
   - (ssh) git clone git@github.com:USERNAME/OTHERREPOSITORY.git
   - (https) git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 5. Create or Modify files in repository on local computer
+  - Add files or wildcard to [.git/info/exclude](https://help.github.com/articles/ignoring-files/#explicit-repository-excludes) if you would like to ignore those on only local repository.
 6. [Add the files to the repository on GitHub](https://help.github.com/articles/adding-a-file-to-a-repository-from-the-command-line/)
   - git add .
   - git commit -m 'First commit'
@@ -33,3 +34,4 @@
 - [Adding an existing project to GitHub using the command line, GitHub Help](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
 - [Git Cheat Sheets, GitHub Training](https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf) ([Japanese](https://training.github.com/kit/downloads/ja/github-git-cheat-sheet.pdf))
 - [Good Resources for Learning Git and GitHub, GitHub Help](https://help.github.com/articles/good-resources-for-learning-git-and-github/)
+- [入門git](https://www.amazon.co.jp/dp/427406767X), Japanese translation of "[Pragmatic Version Control Using Git](https://pragprog.com/book/tsgit/pragmatic-version-control-using-git)"
