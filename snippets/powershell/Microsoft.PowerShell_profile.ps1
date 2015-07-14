@@ -31,6 +31,8 @@ function encodeBase64(){
 	[System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($args[0]))
 }
 
+# TBD: Decode base64url strings correctly.
+# Ref. https://github.com/projectkudu/slingshot/issues/27
 function decodeBase64(){
 	[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($args[0]))
 }
