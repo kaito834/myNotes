@@ -34,10 +34,11 @@ function encodeBase64(){
 function decodeBase64(){
 	# Convert base64url to base64
 	# https://github.com/projectkudu/slingshot/issues/27
+	# http://tools.ietf.org/html/rfc4648#section-5
 	$str = $args[0]
 	if ($str.Contains('-')){ $str = $str.Replace('-', '+') }
 	if ($str.Contains('_')){ $str = $str.Replace('_', '/') }
-	$str = $str + '=' * ($str.Length % 4)
+	$str = $str + '=' * (4 - $str.Length % 4)
 
 	[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($str))
 }
