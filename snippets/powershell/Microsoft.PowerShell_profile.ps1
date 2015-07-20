@@ -118,3 +118,7 @@ function convertEpochToDateAndTime(){
 # Compress some files or directories into Zip format.
 # Or, uncompress Zip file.
 # http://tech.guitarrapc.com/entry/2013/10/07/083837 (in Japanese)
+#
+# Encrypt / Decrypt string or file by AES.
+# ConvertFrom-SecureString and ConvertTo-SecureString cmdlets
+# http://powershell.org/wp/2014/02/01/revisited-powershell-and-encryption/
