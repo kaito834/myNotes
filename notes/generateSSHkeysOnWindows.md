@@ -1,17 +1,34 @@
-## File Formats for SSH Keys
-There have been three file formats for SSH keys. According to [PuTTY document](http://the.earth.li/~sgtatham/putty/0.64/htmldoc/Chapter8.html#puttygen-conversions), "_SSH-2 private keys have no standard format._" 
-- OpenSSH format
-- [PuTTY's native format(*.PPK)](http://the.earth.li/~sgtatham/putty/0.64/htmldoc/Chapter8.html#puttygen-savepriv)
-- SECSH format, [RFC4716](https://tools.ietf.org/html/rfc4716)
+## Generate SSH key pairs by ssh-keygen
+I generated SSH key pairs whose keys are RSA 2048bits by [ssh-keygen](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/ssh-keygen.1?query=ssh-keygen&sec=1) on Windows 10. Then, I used the ssh-keygen installed with git 1.9.5.msysgit.1. Options, '-b 2048' and '-t rsa', are default on this ssh-keygen.
+```
+$ ssh-keygen -b 2048 -t rsa -C 'Generated at Aug 2, 2015.'
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/kaito/.ssh/id_rsa): /c/Users/kaito/.ssh/id_rsa-20150802
+Enter passphrase (empty for no passphrase):***
+Enter same passphrase again:***
+Your identification has been saved in /c/Users/kaito/.ssh/id_rsa-20150802.
+Your public key has been saved in /c/Users/kaito/.ssh/id_rsa-20150802.pub.
+The key fingerprint is:
+db:a1:1a:(snip) Generated at Aug 2, 2015.
+The key's randomart image is:
+(snip)
+```
 
-## Tools
+## References
+### Tools
 - [ssh-keygen](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/ssh-keygen.1?query=ssh-keygen&sec=1)
-  - "[Git for Windows](https://windows.github.com/)" contains it.
+  - "[Git for Windows(msysgit)](https://msysgit.github.io/)" and "[GitHub for Windows](https://windows.github.com/)" contain it.
 - [PuTTYgen](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
   - "[WinSCP(package version)](http://winscp.net/eng/docs/ui_puttygen#obtaining_and_starting_puttygen)" and "[SourceTree for Windows](https://www.sourcetreeapp.com/)" contain it.
 - [Tera Term](http://ttssh2.sourceforge.jp/manual/en/usage/ssh.html#generate)
 
-## References
+### File Formats for SSH Keys
+There have been three file formats for SSH keys. According to [PuTTY document](http://the.earth.li/~sgtatham/putty/0.64/htmldoc/Chapter8.html#puttygen-conversions), "_SSH-2 private keys have no standard format._"
+- OpenSSH format
+- [PuTTY's native format(*.PPK)](http://the.earth.li/~sgtatham/putty/0.64/htmldoc/Chapter8.html#puttygen-savepriv)
+- SECSH format, [RFC4716](https://tools.ietf.org/html/rfc4716)
+
+### Others
 - [SSHの秘密鍵について - 禿散らかしてごめんなさい](http://d.hatena.ne.jp/machua/20110809/1312899353) (in Japanese)
 - [Generating SSH keys, GitHub Help](https://help.github.com/articles/generating-ssh-keys/)
 
