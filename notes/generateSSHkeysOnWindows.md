@@ -12,6 +12,7 @@ The key fingerprint is:
 db:a1:1a:(snip) Generated at Aug 2, 2015.
 The key's randomart image is:
 (snip)
+$ echo "IdentityFile ~/.ssh/id_rsa-20150802" >> ~/.ssh/config
 ```
 
 ## References
@@ -31,6 +32,7 @@ There have been three file formats for SSH keys. According to [PuTTY document](h
 ### Others
 - [SSHの秘密鍵について - 禿散らかしてごめんなさい](http://d.hatena.ne.jp/machua/20110809/1312899353) (in Japanese)
 - [Generating SSH keys, GitHub Help](https://help.github.com/articles/generating-ssh-keys/)
+- [ssh_config, OpenBSD manual pages](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man5/ssh_config.5)
 
 ## Appendix 1. Tips for SSH
 ###Convert SECSH(RFC4716) format to others
