@@ -9,6 +9,7 @@
 # websocket-client==0.32.0
 import websocket
 import ssl
+import time
 
 def main():
     headers = [
@@ -30,6 +31,13 @@ def main():
     wss = websocket.create_connection("wss://echo.websocket.org/", header=headers,
         http_proxy_host='127.0.0.1', http_proxy_port=8080,
         sslopt={"cert_reqs": ssl.CERT_NONE})
+
+
+    We can get response headers as dict type from headers member of WebSocket instance.
+    >>> import websocket
+    >>> wss = websocket.create_connection("wss://echo.websocket.org/")
+    >>> wss.headers
+    {'date': 'sat, 15 aug 2015 04:04:19 gmt', 'server': 'kaazing gateway', 'upgrade': 'websocket', 'connection': 'upgrade', 'sec-websocket-accept': 'l3ltqc+2pngmvwelrpudewb2nua='}
     '''
 
     print("Sending 'Hello, World'...")
@@ -38,6 +46,13 @@ def main():
     print('Receving...')
     result = wss.recv()
     print("Received '{0}'".format(result))
+
+    print("Send ping frame for 5 times on every 5 seconds...")
+    for i in range(5):
+        wss.ping()
+        # https://docs.python.org/3/library/time.html#time.sleep
+        time.sleep(5)
+
     wss.close()
 
 if __name__ == '__main__':
