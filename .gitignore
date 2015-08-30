@@ -1,4 +1,4 @@
-# Windows 
+# Windows
 # Ref.https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
 Thumbs.db
 ehthumbs.db
@@ -16,3 +16,6 @@ __pycache__/
 
 # KeePass Database
 *.kdbx
+
+# Vagrant
+.vagrant/
