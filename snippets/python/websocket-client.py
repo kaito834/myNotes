@@ -10,6 +10,7 @@
 import websocket
 import ssl
 import time
+import threading
 
 def main():
     headers = [
@@ -40,20 +41,40 @@ def main():
     {'date': 'sat, 15 aug 2015 04:04:19 gmt', 'server': 'kaazing gateway', 'upgrade': 'websocket', 'connection': 'upgrade', 'sec-websocket-accept': 'l3ltqc+2pngmvwelrpudewb2nua='}
     '''
 
-    print("Sending 'Hello, World'...")
+    print("[!] Sending 'Hello, World'...")
     wss.send('Hello, World')
-    print('Sent')
-    print('Receving...')
+    print('[!] Sent')
+    print('[!] Receving...')
     result = wss.recv()
-    print("Received '{0}'".format(result))
+    print("[!] Received '{0}'".format(result))
 
-    print("Send ping frame for 5 times on every 5 seconds...")
-    for i in range(5):
-        wss.ping()
-        # https://docs.python.org/3/library/time.html#time.sleep
-        time.sleep(5)
+    print("[!] Send ping frame on every 5 seconds...")
+    # https://github.com/kaito834/myNotes/blob/master/snippets/python/threading_infiniteLoop.py
+    thread_event = threading.Event()
+    thread = threading.Thread(target=sendPingFrame, args=(wss, thread_event, 5))
+    thread.start()
+
+    print('[!] Start infinite loop to send \'Hello, World!\' every 8 seconds.')
+    print('[!] NOTE: The loop will finish if you will press [Ctrl+C].')
+    while True:
+        try:
+            wss.send('Hello, World!')
+            print('[!] Sent \'Hello, World!\'.')
+            data = wss.recv()
+            print("[!] Received '{0}'".format(data))
+            time.sleep(8)
+        except KeyboardInterrupt:
+            thread_event.set()
+            break
 
     wss.close()
+
+# https://github.com/kaito834/myNotes/blob/master/snippets/python/threading_infiniteLoop.py
+def sendPingFrame(wsObj, stop_event, sleep_time):
+    while(not stop_event.is_set()):
+        wsObj.ping()
+        print('[!] Sent PING frame.')
+        stop_event.wait(sleep_time)
 
 if __name__ == '__main__':
     main()
