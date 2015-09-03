@@ -92,5 +92,18 @@ $ curl -k --proxy https://127.0.0.1:8080/ https://www.ipa.go.jp/
 
 ### Send POST Request
 ```
-$ curl -X POST http://127.0.0.1/
+$ curl -X POST -d a=aaa -d b=bbb http://127.0.0.1/
 ```
+Then, the HTTP request was below.
+```
+POST / HTTP/1.1
+User-Agent: curl/7.41.0
+Host: 127.0.0.1
+Accept: */*
+Content-Length: 11
+Content-Type: application/x-www-form-urlencoded
+
+a=aaa&b=bbb
+```
+#### Reference
+- [-d/--data, curl.1 the man page](http://curl.haxx.se/docs/manpage.html#-d)
