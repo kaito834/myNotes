@@ -105,5 +105,33 @@ Content-Type: application/x-www-form-urlencoded
 
 a=aaa&b=bbb
 ```
+A option [-d/--data](http://curl.haxx.se/docs/manpage.html#-d) allows you read body from file or STDIN.
+A sample is below. In this example, HTTP body was read from 'sample.xml'.
+Then, value of Content-Type is same as the HTTP request above; application/x-www-form-urlencoded.
+```
+$ curl -i -X POST -d @sample.xml http://127.0.0.1/
+```
+You can change the value of Content-Type by a option [-H](http://curl.haxx.se/docs/manpage.html#-H).
+```
+$ curl -i -X POST -d @sample.xml -H 'Content-Type: application/xml' http://127.0.0.1/
+```
+
 #### Reference
 - [-d/--data, curl.1 the man page](http://curl.haxx.se/docs/manpage.html#-d)
+- [Appendix A, Red Hat Enterprise Virtualization 3.0 REST API Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Virtualization/3.0/html/REST_API_Guide/appe-REST_API_Guide-cURL_Integration.html)
+
+### Send HTTP Request w/ Authorization Header
+#### Basic Authentication
+```
+$ curl --basic -u user http://192.168.0.1/
+Enter host password for user 'user': *****
+```
+
+#### Digest Authentication
+```
+$ curl --digest -u user http://192.168.0.1/
+```
+
+#### References
+- [--basic, curl.1 the man page](http://curl.haxx.se/docs/manpage.html#--basic)
+- [--digest, curl.1 the man page](http://curl.haxx.se/docs/manpage.html#--digest)
