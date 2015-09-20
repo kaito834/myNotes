@@ -63,3 +63,29 @@ I noted useful references for me in this text. These references relate to Web AP
 > といった場合にも(ブラウザが限定されるものの)このヘッダは有効です。たとえば GitHub ではリポジトリで
 > 管理されている JavaScript ファイルを直接 SCRIPT 要素として読み込まれないために、メディアタイプを
 > text/plain にしたうえで、このヘッダを付けています。
+
+A case of GitHub is described on '4.4.1 メディアタイプをContent-Typeで指定する必要性'.
+
+```
+  もう1 つ別のContent-Type の利用例を見てみましょう。GitHub ではたくさんのリポジトリ
+をホストしており、その中には当然JavaScript などのファイルも含まれています。したがって、
+以下のようにファイルを直接指定するとJavaScript として読み込めてしまうような気がします。
+
+  <script type="text/javascript" src="https://raw.githubusercontent.com/
+  bigspaceship/shine.js/master/dist/shine.min.js">
+
+  しかし実際にはこのコードは正しく動作しません。たとえばGoogle Chrome で上記の要素を含
+むHTML を開くと、以下のようなエラーが出て、JavaScript が実行されることはありません。
+
+  Refused to execute script from 'https://raw.githubusercontent.com/bigspaceship/
+  shine.js/master/dist/shine.min.js' because its MIME type ('text/plain') is not
+  executable, and strict MIME type checking is enabled.
+
+  なぜならGitHub はこのJavaScript をtext/plain というメディアタイプで送ってきているか
+らです。
+
+  HTTP/1.1 200 OK
+  Date: Tue, 22 Apr 2014 01:55:22 GMT
+  Content-Type: text/plain; charset=utf-8
+  X-Content-Type-Options: nosniff
+```
