@@ -64,3 +64,30 @@
   - Within last 7 days
 - in: ～後
   - Will retry in 30 seconds...
+
+#### pp.499-500 第33章 提示
+- following (adj, noun)
+  - You have received messages from the following users.
+  - The following are the errors occurred while deleting the file: A, B, and C.
+- below (adv)
+  - Type your password below.
+  - The information below is required for registration.
+  - From the list below, select the files to edit.
+- as follows:
+  - The options you can select are as follows:
+
+#### p.503 34.1.2 動詞に関連した用語
+他動詞
+> 動作が他の人や物に及ぶため、目的語を取る動詞が「他動詞」です。目的語は前置詞なしで
+> 直接動詞の直後に置けます。例えば visit で、「Visit our website」（弊社ウェブサイトを
+> 訪問してください）となります。ただし、文脈から目的語が分かる場合は省略されるケースがあります。
+
+自動詞
+> 動作が自己完結して他に及ばないため、それだけで使えて目的語が不要な動詞が「自動詞」です。
+> 例えば exist（存在する）で、「File already exists.」（ファイルはすでに存在します）と
+> なります。動詞の直後に目的語はありません。
+
+> 他にも look は自動詞で、「Look at the icon.」（アイコンを見てください）などとなります。
+> ここが分かりにくいのですが、文法的には「at the icon」部分は目的語ではなく、修飾語となります。
+> 自動詞を使う場合、この「目的語のように思える修飾語」には前置詞（上の例では at）が必要に
+> なります。**他動詞と自動詞の大きな違いは、動詞の後の前置詞の有無であると言えます。**
