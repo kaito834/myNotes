@@ -182,5 +182,31 @@ C:\USERS\KAITO\VIRTUALBOX VMS
 サブフォルダーは存在しません
 ```
 
+## The Options of vagrant up
+'vagrant up' has some options. The options are below;
+```
+$> vagrant up -h
+Usage: vagrant up [options] [name]
+
+Options:
+
+        --[no-]provision             Enable or disable provisioning
+        --provision-with x,y,z       Enable only certain provisioners, by type.
+        --[no-]destroy-on-error      Destroy machine if any fatal error happens(default to true)
+        --[no-]parallel              Enable or disable parallelism if provider supports it
+        --provider PROVIDER          Back the machine with a specific provider
+    -h, --help                       Print this help
+```
+
+Vagrant doesn't do provisioning if 'vagrant up' with --no-provision option would be executed.
+```
+$> vagrant up --no-provision
+
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'CentOS65'...
+(snip)
+==> default: Machine not provisioned because `--no-provision` is specified.
+```
+
 ## References
 - [Windows上でVirtualBox+Vagrant+CentOSによる仮想環境構築 - Qiita](http://qiita.com/hiroyasu55/items/11a4c996b0c62450940f) (in Japanese)
