@@ -91,3 +91,64 @@
 > ここが分かりにくいのですが、文法的には「at the icon」部分は目的語ではなく、修飾語となります。
 > 自動詞を使う場合、この「目的語のように思える修飾語」には前置詞（上の例では at）が必要に
 > なります。**他動詞と自動詞の大きな違いは、動詞の後の前置詞の有無であると言えます。**
+
+### [Hapa Eikaiwa](http://hapaeikaiwa.com/)
+#### [「How about」と「What about」の違い](http://hapaeikaiwa.com/2015/03/17/%E3%80%8Chow-about%E3%80%8D%E3%81%A8%E3%80%8Cwhat-about%E3%80%8D%E3%81%AE%E9%81%95%E3%81%84/)
+- How about
+  - How about dinner tonight?
+  - How about meeting tomorrow?
+  - How about next Monday?
+- What about
+  - What about the car? Are we going get a rental car?
+  - What about the cups and plates? Who’s bringing them?
+  - What about the meeting tomorrow? Are you going to call it off?
+  - What about Tracy? Did you invite her?
+  - What about breakfast? Is it included?
+  - What about our manager? Is he coming?
+- How/What about
+  - A: What are you doing this weekend?
+    - B: I’m just going to relax at home. How/What about you?
+  - A: What do you do?
+    - B: I’m an English teacher. How/What about you?
+  - A: What is your favorite sport?
+    - B: Basketball is my favorite sport. How/What about you?
+
+#### [英語に直訳できない「お世話になります」](http://hapaeikaiwa.com/2015/02/17/%E8%8B%B1%E8%AA%9E%E3%81%AB%E7%9B%B4%E8%A8%B3%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E3%80%8C%E3%81%8A%E4%B8%96%E8%A9%B1%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99%E3%80%8D/)
+- Thank you for your / We appreciate your
+  - Thank you for your ongoing support
+  - Thank you for your patronage
+  - Thank you for your interest
+  - Thank you for your assistance
+- How’s it going?
+  - Hey Andrew. How’s it going?
+  - Nice to see you. / Nice to hear from you.
+  - It’s a pleasure working with you
+- Thanks for taking care of
+  - Hey, I’m George’s mother. Thanks for taking care of him today.
+  - Thanks for always looking after Megan.
+- Thank you for
+  - Thank you for your hospitality.
+  - Thank you for being a great host during my stay in Tokyo.
+  - Thanks for your help.
+  - Thanks for everything.
+
+### [英語で「よろしくお願いします」は直訳できない？](http://hapaeikaiwa.com/2014/09/10/%E8%8B%B1%E8%AA%9E%E3%81%A7%E3%80%8C%E3%82%88%E3%82%8D%E3%81%97%E3%81%8F%E3%81%8A%E9%A1%98%E3%81%84%E3%81%97%E3%81%BE%E3%81%99%E3%80%8D%E3%81%AF%E7%9B%B4%E8%A8%B3%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/)
+- Nice to meet you
+  - Pleased to meet you
+  - (It’s a) pleasure to meet you
+- (It was) Nice meeting you. Take care.
+  - Have a good one.
+  - I’ll see you around.
+  - Let’s/We’ll stay in touch.
+- Tell (name) I said hello / Please say hello to (name)
+  - Tell Sean I said hello.
+  - Please say hello to your family
+- Happy New Year
+  - Wishing you a happy, healthy and prosperous New Year.
+- I’m looking forward to working with you / I’m excited to work with you
+  - I’m looking forward to working with this company.
+  - I’m excited to be part of this company.
+- Thanks for taking care of it.
+- Thank you
+  - Please let me know. Thanks
+  - Thank you for your cooperation.
