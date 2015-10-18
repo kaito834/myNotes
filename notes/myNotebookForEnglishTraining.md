@@ -152,3 +152,29 @@
 - Thank you
   - Please let me know. Thanks
   - Thank you for your cooperation.
+
+#### [英文メールの基本ルール【書き出し(頭語)編】](http://hapaeikaiwa.com/2014/02/07/%E8%8B%B1%E8%AA%9E%E3%81%A7%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9%EF%BC%9A%E3%80%8C%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%80%8D%E3%81%A8%E3%80%8C%E3%82%AB%E3%82%B8%E3%83%A5/)
+
+#### [英文メールの基本ルール【結び編】](http://hapaeikaiwa.com/2014/02/26/%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%AE%E7%B5%90%E3%81%B3%E3%81%AE%E8%A8%80%E8%91%89%EF%BC%9A%E3%80%8C%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%AB%E3%80%8D%E3%81%A8%E3%80%8C%E3%82%A4%E3%83%B3%E3%83%95/)
+
+### [英語 with Luke](http://www.eigowithluke.com/)
+#### [今何て言ったの？聞き返す時に使う英語](http://www.eigowithluke.com/2015/08/what-did-you-say/)
+- 今何て言ったの？
+  - What did you (just) say?
+  - Sorry, I didn’t get that. Can you say that again please?
+  - What? / Pardon? / Sorry?
+    - What という基本的な英語は、よく使われていますが失礼に聞こえる場合もあるので、親しい間柄でのみで使うと良いでしょう。
+- どういう意味?
+  - I’m not sure what you mean.
+  - Sorry, I don't understand.
+  - What do you mean?
+- 相手の話すペースが早いなら
+  - Could you say that a bit more slowly please?
+
+#### [「sounds good」の意味、また「sounds good」の使い方を示す例文](http://www.eigowithluke.com/2011/05/sounds-good/)
+- Sounds good!
+- It sounds good, but it could be problematic.
+- You wanna have sushi today? Sounds good!
+- That sounds good to me.
+
+#### [Toとforの使い分け　ネイティブの意見](http://www.eigowithluke.com/2010/08/to%E3%81%A8for%E3%81%AE%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91/)
