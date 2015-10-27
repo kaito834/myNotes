@@ -11,8 +11,10 @@ Features: AsynchDNS IPv6 Largefile SSPI Kerberos SPNEGO NTLM SSL libz
 
 ## My usage of cURL
 ### Basic
+The curl with no options outputs only body of HTTP response.
 ```
 $ curl http://127.0.0.1/
+<html><body><h1>hi!</h1></body></html>
 ```
 Then, the HTTP request was below:
 ```
@@ -22,9 +24,10 @@ Host: 127.0.0.1
 Accept: */*
 
 ```
-The curl with no options outputs only body of HTTP response.
-An option [-i/--include](http://curl.haxx.se/docs/manpage.html#-i) allows you output all of HTTP response.
-Or, an option [-I/--head](http://curl.haxx.se/docs/manpage.html#-I) allows you output only headers of HTTP response.
+
+### Output HTTP response and request
+An option [-i/--include](http://curl.haxx.se/docs/manpage.html#-i) allows you output all of HTTP response; Both headers and body of HTTP response.
+Or, an option [-I/--head](http://curl.haxx.se/docs/manpage.html#-I) allows you output **only** headers of HTTP response.
 ```
 $ curl -i http://127.0.0.1/
 HTTP/1.0 200 OK
@@ -39,6 +42,76 @@ Server: BaseHTTP/0.6 Python/3.4.3
 Date: Thu, 03 Sep 2015 14:14:06 GMT
 Content-type: text/html
 
+```
+If you would like to output HTTP request on STDIN, you should execute curl with --trace-ascii or -v options.
+An option [--trace-ascii](http://curl.haxx.se/docs/manpage.html#--trace-ascii) with '-' allows you output HTTP request; both headers and body of HTTP request. The output for curl w/ --trace-ascii contains debug strings, so it is better to filter those strings.
+Or an option [-v](http://curl.haxx.se/docs/manpage.html#-v) allows you output **only** headers of HTTP request.
+```
+$ curl --trace-ascii - -X POST -d a=aaa http://127.0.0.1/
+== Info:   Trying 127.0.0.1...
+== Info: Connected to 127.0.0.1 (127.0.0.1) port 80 (#0)
+=> Send header, 142 bytes (0x8e)
+0000: POST / HTTP/1.1
+0011: User-Agent: curl/7.41.0
+002a: Host: 127.0.0.1
+003b: Accept: */*
+0048: Content-Length: 5
+005b: Content-Type: application/x-www-form-urlencoded
+008c:
+=> Send data, 5 bytes (0x5)
+0000: a=aaa
+== Info: upload completely sent off: 5 out of 5 bytes
+== Info: HTTP 1.0, assume close after body
+<= Recv header, 17 bytes (0x11)
+0000: HTTP/1.0 200 OK
+<= Recv header, 35 bytes (0x23)
+0000: Server: BaseHTTP/0.6 Python/3.4.3
+<= Recv header, 37 bytes (0x25)
+0000: Date: Tue, 27 Oct 2015 12:41:08 GMT
+<= Recv header, 25 bytes (0x19)
+0000: Content-type: text/html
+<= Recv header, 2 bytes (0x2)
+0000:
+<= Recv data, 40 bytes (0x28)
+0000: <html><body><h1>POST!</h1></body></html>
+<html><body><h1>POST!</h1></body></html>== Info: Closing connection 0
+
+$ curl --trace-ascii a.txt -X POST -d a=aaa http://127.0.0.1/
+<html><body><h1>POST!</h1></body></html>
+$ grep -E "^[0-9a-f]{4}\:" a.txt | cut -c 7-
+POST / HTTP/1.1
+User-Agent: curl/7.41.0
+Host: 127.0.0.1
+Accept: */*
+Content-Length: 5
+Content-Type: application/x-www-form-urlencoded
+
+a=aaa
+HTTP/1.0 200 OK
+Server: BaseHTTP/0.6 Python/3.4.3
+Date: Tue, 27 Oct 2015 13:14:02 GMT
+Content-type: text/html
+
+<html><body><h1>POST!</h1></body></html>
+
+$ curl -v -X POST -d a=aaa http://127.0.0.1/
+*   Trying 127.0.0.1...
+* Connected to 127.0.0.1 (127.0.0.1) port 80 (#0)
+> POST / HTTP/1.1
+> User-Agent: curl/7.41.0
+> Host: 127.0.0.1
+> Accept: */*
+> Content-Length: 5
+> Content-Type: application/x-www-form-urlencoded
+>
+* upload completely sent off: 5 out of 5 bytes
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Server: BaseHTTP/0.6 Python/3.4.3
+< Date: Tue, 27 Oct 2015 12:44:14 GMT
+< Content-type: text/html
+<
+<html><body><h1>POST!</h1></body></html>* Closing connection 0
 ```
 
 ### Range 'Globbing'
