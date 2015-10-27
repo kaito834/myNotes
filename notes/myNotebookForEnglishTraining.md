@@ -20,6 +20,41 @@
 - Please wait patiently while this request is processed.
 
 ### [アプリケーションをつくる英語](http://tatsu-zine.com/books/english4app)
+#### pp.1-111, 第1章 共通アクション
+- p.27 assign: 割り当てる
+  - Assign application
+  - Assign tasks
+  - Assign this task to:
+- pp.32-33 access: アクセスする
+  - Unable to access the website.
+  - access は他動詞なので直後に目的語を取ります。
+    - 日本語に引きずられて to を入れてしまいそうになりますが、不要です。
+    - 「access to ～」は「～へのアクセス」という意味の名詞として使われます。
+- p.35 decline: 拒否する
+  - Decline the invitation
+  - He declined the invitaion.
+  - 「辞退する」、「丁寧に断る」というニュアンスです。
+    - チャットに誘われたが拒否するといった場合は deny や reject よりこちらが望ましいでしょう。
+- p.69 correct: 修正する
+  - Correct mistyped words
+  - Correct the errors shown below.
+  - 誤りを修正するというニュアンスです。
+- p.69 modify: 修正する (p.61 変更する)
+  - The username cannot be modified.
+  - Last modified:
+  - modified
+  - 部分的に変更するというニュアンスです。
+- p.78 append: 追加する
+  - Append signature to message
+  - append はすでにあるものに付け加えるというニュアンスです。
+- p.79 include: 含める
+  - Include original message
+  - 含んでいる状態を表すなら contain も使えますが、含んでいる状態にする（含める、入れる）というアクションの場合は include です。
+- p.105 retrieve: 取得する
+  - Retrieving messages...
+  - Retrieve articles
+  - データベースや Web などを検索して取得するというニュアンスです。
+
 #### pp.185-191 4.3.5 時分秒, 第4章 基本的な表現
 - as of: ～時点, ～現在
   - as of August 5
@@ -176,5 +211,9 @@
 - It sounds good, but it could be problematic.
 - You wanna have sushi today? Sounds good!
 - That sounds good to me.
+
+#### [「as you know」の意味と使い方](http://www.eigowithluke.com/2011/05/as-you-know/)
+- As you know, this novel is based on a true story.
+- As you already know, I am running for office.
 
 #### [Toとforの使い分け　ネイティブの意見](http://www.eigowithluke.com/2010/08/to%E3%81%A8for%E3%81%AE%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91/)
