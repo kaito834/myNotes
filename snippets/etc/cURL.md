@@ -26,8 +26,8 @@ Accept: */*
 ```
 
 ### Output HTTP response and request
-An option [-i/--include](http://curl.haxx.se/docs/manpage.html#-i) allows you output all of HTTP response; Both headers and body of HTTP response.
-Or, an option [-I/--head](http://curl.haxx.se/docs/manpage.html#-I) allows you output **only** headers of HTTP response.
+An option [-i/--include](http://curl.haxx.se/docs/manpage.html#-i) allows you to output all of HTTP response; Both headers and body of HTTP response.
+Or, an option [-I/--head](http://curl.haxx.se/docs/manpage.html#-I) allows you to output **only** headers of HTTP response.
 ```
 $ curl -i http://127.0.0.1/
 HTTP/1.0 200 OK
@@ -44,8 +44,8 @@ Content-type: text/html
 
 ```
 If you would like to output HTTP request on STDIN, you should execute curl with --trace-ascii or -v options.
-An option [--trace-ascii](http://curl.haxx.se/docs/manpage.html#--trace-ascii) with '-' allows you output HTTP request; both headers and body of HTTP request. The output for curl w/ --trace-ascii contains debug strings, so it is better to filter those strings.
-Or an option [-v](http://curl.haxx.se/docs/manpage.html#-v) allows you output **only** headers of HTTP request.
+An option [--trace-ascii](http://curl.haxx.se/docs/manpage.html#--trace-ascii) with '-' allows you to output HTTP request; both headers and body of HTTP request. The output for curl w/ --trace-ascii contains debug strings, so it is better to filter those strings.
+Or an option [-v](http://curl.haxx.se/docs/manpage.html#-v) allows you to output **only** headers of HTTP request.
 ```
 $ curl --trace-ascii - -X POST -d a=aaa http://127.0.0.1/
 == Info:   Trying 127.0.0.1...
@@ -138,7 +138,7 @@ $ curl --proxy http://127.0.0.1:8080/ http://127.0.0.1/
 - [-x/--proxy, curl.1 the man page](http://curl.haxx.se/docs/manpage.html#-x)
 
 ### Accept invalid SSL certificate
-For example, SSL certificate problem raises when you access to HTTPS site via Burp Suite.
+For example, SSL certificate problem raises when you access HTTPS site via Burp Suite.
 Then, self signed certificate by Portswigger.net was not installed on Windows.
 ```
 $ curl --proxy https://127.0.0.1:8080/ https://www.ipa.go.jp/
@@ -158,7 +158,7 @@ If you'd like to turn off curl's verification of the certificate, use
  the -k (or --insecure) option.
 ```
 
-An option [-k/--insecure](http://curl.haxx.se/docs/manpage.html#-k) allows you accept invalid SSL certificate.
+An option [-k/--insecure](http://curl.haxx.se/docs/manpage.html#-k) allows you to accept invalid SSL certificate.
 ```
 $ curl -k --proxy https://127.0.0.1:8080/ https://www.ipa.go.jp/
 ```
@@ -178,7 +178,7 @@ Content-Type: application/x-www-form-urlencoded
 
 a=aaa&b=bbb
 ```
-A option [-d/--data](http://curl.haxx.se/docs/manpage.html#-d) allows you read body from file or STDIN.
+A option [-d/--data](http://curl.haxx.se/docs/manpage.html#-d) allows you to read body from file or STDIN.
 A sample is below. In this example, HTTP body was read from 'sample.xml'.
 Then, value of Content-Type is same as the HTTP request above; application/x-www-form-urlencoded.
 ```
