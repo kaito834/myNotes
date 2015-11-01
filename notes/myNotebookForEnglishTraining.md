@@ -167,7 +167,7 @@
   - Thanks for your help.
   - Thanks for everything.
 
-### [英語で「よろしくお願いします」は直訳できない？](http://hapaeikaiwa.com/2014/09/10/%E8%8B%B1%E8%AA%9E%E3%81%A7%E3%80%8C%E3%82%88%E3%82%8D%E3%81%97%E3%81%8F%E3%81%8A%E9%A1%98%E3%81%84%E3%81%97%E3%81%BE%E3%81%99%E3%80%8D%E3%81%AF%E7%9B%B4%E8%A8%B3%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/)
+#### [英語で「よろしくお願いします」は直訳できない？](http://hapaeikaiwa.com/2014/09/10/%E8%8B%B1%E8%AA%9E%E3%81%A7%E3%80%8C%E3%82%88%E3%82%8D%E3%81%97%E3%81%8F%E3%81%8A%E9%A1%98%E3%81%84%E3%81%97%E3%81%BE%E3%81%99%E3%80%8D%E3%81%AF%E7%9B%B4%E8%A8%B3%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/)
 - Nice to meet you
   - Pleased to meet you
   - (It’s a) pleasure to meet you
@@ -187,6 +187,22 @@
 - Thank you
   - Please let me know. Thanks
   - Thank you for your cooperation.
+
+#### [「Following」と「Below」の使い分けルール](http://hapaeikaiwa.com/2014/05/21/%E3%80%8Cfollowing%E3%80%8D%E3%81%A8%E3%80%8Cbelow%E3%80%8D%E3%81%AE%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91%E3%83%AB%E3%83%BC%E3%83%AB/)
+- Following
+  - The following topics were discussed in today’s meeting.
+  - The following products are out of stock.
+  - Please refer to the following link.
+  - Please send it to the following address.
+  - The following is the expense report.
+- Below
+  - The topics below were discussed in today’s meeting.
+  - The products below are out of stock.
+  - Please see below.
+  - Please send it to the address below.
+  - The details are listed below.
+- Comment
+  - “As follows” is another commonly used expression. As you mentioned in your example, “The details are as follows” is correct!
 
 #### [英文メールの基本ルール【書き出し(頭語)編】](http://hapaeikaiwa.com/2014/02/07/%E8%8B%B1%E8%AA%9E%E3%81%A7%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9%EF%BC%9A%E3%80%8C%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%80%8D%E3%81%A8%E3%80%8C%E3%82%AB%E3%82%B8%E3%83%A5/)
 
