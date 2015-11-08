@@ -208,3 +208,54 @@ $ curl --digest -u user http://192.168.0.1/
 #### References
 - [--basic, curl.1 the man page](http://curl.haxx.se/docs/manpage.html#--basic)
 - [--digest, curl.1 the man page](http://curl.haxx.se/docs/manpage.html#--digest)
+
+### Send HTTP request with multipart body
+You can use '-H' and '-F' options if you would like to send HTTP request with multipart bodies. The sample curl command with them and the HTTP request are as follows:
+```
+$ curl -X POST -H "Content-Type: multipart/mixed" -F name="@sample.json;type=application/json" -F "name=@sample.jpg;type=image/jpeg" http://127.0.0.1/
+```
+```
+POST / HTTP/1.1
+User-Agent: curl/7.41.0
+Host: 127.0.0.1
+Accept: */*
+Content-Length: 509
+Expect: 100-continue
+Content-Type: multipart/mixed; boundary=------------------------7240fd359b06b012
+
+
+--------------------------7240fd359b06b012
+Content-Disposition: form-data; name="name"; filename="sample.json"
+Content-Type: application/json
+
+{
+  "id": 123,
+  "objects": [
+    {
+      "str1": "hoge",
+      "str2": "fuga"
+    },
+    {
+      "str1": "fuga",
+      "str2": "hoge",
+    }
+  ]
+}
+
+--------------------------7240fd359b06b012
+Content-Disposition: form-data; name="name"; filename="sample.jpg"
+Content-Type: image/jpeg
+
+sample jpeg
+--------------------------7240fd359b06b012--
+```
+
+'-F' option allows you to send HTTP request with over one multipart bodies. According to cURL manual, this HTTP request is based on [RFC2388](https://www.ietf.org/rfc/rfc2388.txt). '@sample.json' on '-H' option above indicates to read contents from file, sample.json. ';type=application/json' is optional; semi-column is just a separator. You can include Content-Type header in multipart body if you would like to set it.
+
+You execute curl command with only -F option, and the value of Content-type header is 'multipart/form-data'. If the value is not good for you, you should execute with '-H' option that have 'Content-Type: XXX' as the value. For example, '-H' option with 'Content-Type: multipart/mixed' allows you to change value of Content-Type header from 'multipart/form-data' to 'multipart/mixed'.
+
+#### Reference
+- [-H, --header, curl.1 the man page](http://curl.haxx.se/docs/manpage.html#-H)
+- [-F, --form, curl.1 the man page](http://curl.haxx.se/docs/manpage.html#-F)
+- [Curl: Re: Multipart/mixed from Config File](http://curl.haxx.se/mail/archive-2010-03/0049.html)
+- [send a HTTP request which Content-Type is 'multipart/mixed' by cURL, GitHub Gist](https://gist.github.com/kaito834/12244be613c6e6b1c59a)
