@@ -100,6 +100,59 @@
 - in: ～後
   - Will retry in 30 seconds...
 
+#### pp.447-449 第19章 可能性
+- probably, likely, possibly
+  - You will probably lose the data.
+  - This is most likely caused by another user.
+  - You cannot access the server (possily down?)
+  - 可能性の高さとしては、probably と likely が比較的高く(6～7割)、possily はそれよい低い(3～4割)感じです。
+  - ちなみに likely は形容詞も同じ形で、例えば「This is likely to happen again.」(それは再度発生しそうだ。)といった文にできます。
+
+#### pp.469-474 第25章 指示
+- For 名詞, (please) 動詞
+　- For details, click the More button.
+- (Please) 動詞 + while ～
+  - Please wait while upgrading the software...
+- (Please) 動詞 + until ～
+  - Please wait until information is updated.
+- 動詞1, (and) then 動詞2
+  - Select the item you want to add from the list, and then click OK.
+  - Save the files, then restart your computer.
+- make sure that ～
+  - Make sure that the computer is connected to the Internet.
+  - Make sure that you are using the latest version.
+
+#### pp.484-487 第29章 条件
+- if ～: ～すると、～の場合
+  - If you choose Sort, you can sort files by name.
+  - Set up another account if necessary.
+  - If no files are found: ～
+  - Required if camera used
+  - 条件は基本的に if や when を使います。if と when はどちらを使っても問題ないことが多いですが、使い分けることもあります。ある条件の内容が「未確定」なのか「確定している」のかという場合などです。
+- for ～: ～の場合
+  - Enable this option for guest users.
+  - 「in the case ～」に言い換えられますが、あまり使われません。
+- by 動名詞, you 動詞
+  - By choosing Sort, you can sort files by name.
+- if available
+  - Website URL (if available)
+- if possible
+  - Use this option if possible
+
+#### pp.490-492 第31章 理由
+- because (接): ので、理由で
+  - You cannot access this page because you have not logged in.
+  - Because there is a user with the same name, the account cannot be created.
+  - Failed to open the file because: ～
+  - 理由はbecauseで表現するケースが多いです。sinceも間違いではありませんが、「～以来」という意味もあります。
+  - IBM Style Guideでも同様に、理由を表すのに since や as を使うべきではないとしています。
+- because of 名詞
+  - The application could not complete your request because of a connection error.
+  - Could not be removed because of an unknown error.
+- due to 名詞
+  - The operation failed due to a network error.
+  - IBM Style Guide では due to よりも because of の方が適切だとしています。
+
 #### pp.499-500 第33章 提示
 - following (adj, noun)
   - You have received messages from the following users.
@@ -126,6 +179,21 @@
 > ここが分かりにくいのですが、文法的には「at the icon」部分は目的語ではなく、修飾語となります。
 > 自動詞を使う場合、この「目的語のように思える修飾語」には前置詞（上の例では at）が必要に
 > なります。**他動詞と自動詞の大きな違いは、動詞の後の前置詞の有無であると言えます。**
+
+#### p.507 34.1.4 品詞の修飾関係
+形容詞
+> 名詞(と代名詞)を修飾します。new、simple、activeなどです。
+> 例:
+> a new file
+> active windows
+
+副詞
+> 動詞、形容詞、副詞、文全体を修飾します。manually、very、alwaysなどです。
+> 例:
+> You can manually delete it. (動詞deleteを修飾)
+> Download is quite difficult. (形容詞difficultを修飾)
+> I visit the website very often. (副詞oftenを修飾)
+> Probably, you can download it. (文全体を修飾)
 
 ### [Hapa Eikaiwa](http://hapaeikaiwa.com/)
 #### [「How about」と「What about」の違い](http://hapaeikaiwa.com/2015/03/17/%E3%80%8Chow-about%E3%80%8D%E3%81%A8%E3%80%8Cwhat-about%E3%80%8D%E3%81%AE%E9%81%95%E3%81%84/)
