@@ -35,13 +35,20 @@ There have been three file formats for SSH keys. According to [PuTTY document](h
 - [ssh_config, OpenBSD manual pages](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man5/ssh_config.5)
 
 ## Appendix 1. Tips for SSH
-###Convert SECSH(RFC4716) format to others
+### Register public key for someone on remote host
+"13.2.4. Using Key-Based Authentication" on [Red Hat Enterprise Linux 6
+Deployment Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html-single/Deployment_Guide/index.html#s2-ssh-configuration-keypairs)
+> 5.
+> Copy the content of ~/.ssh/id_rsa.pub into the ~/.ssh/authorized_keys on the machine to which you want
+> to connect, appending it to its end if the file already exists.
+
+### Convert SECSH(RFC4716) format to others
 This is quoted from http://qiita.com/marcie001/items/47a23cfeed00db783d39 (in Japanese).
 ```
 $ ssh-keygen -i -f id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 
-###Identify a size of SSH key
+### Identify a size of SSH key
 This is quoted from http://d.hatena.ne.jp/hnw/20140705 (in Japanese).
 ```
 $ ssh-keygen -l -f $HOME/.ssh/id_rsa.pub
