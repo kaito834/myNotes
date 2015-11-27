@@ -37,7 +37,7 @@ There have been three file formats for SSH keys. According to [PuTTY document](h
 ## Appendix 1. Tips for SSH
 ### Register public key for someone on remote host
 "13.2.4. Using Key-Based Authentication" on [Red Hat Enterprise Linux 6
-Deployment Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html-single/Deployment_Guide/index.html#s2-ssh-configuration-keypairs)
+Deployment Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/s2-ssh-configuration-keypairs.html)
 > 5.
 > Copy the content of ~/.ssh/id_rsa.pub into the ~/.ssh/authorized_keys on the machine to which you want
 > to connect, appending it to its end if the file already exists.
