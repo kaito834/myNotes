@@ -3,7 +3,7 @@
 ### An Environment for this procedure
 - [GnuPG(GPG)](https://www.gnupg.org/) 2.0.x on Windows 8.1
   - We should latest gpg if no specific reasons.
-  - I have used one [Gpg4win](http://www.gpg4win.org/) contains 
+  - I have been using one [Gpg4win](http://www.gpg4win.org/) contains
 
 ### Procedure to generate keys
 1. Define parameters
@@ -126,3 +126,24 @@ ASCII外装出力を強制します。
 - [Key size, Wikipedia](http://en.wikipedia.org/wiki/Key_size)
 - [PGP Key Management Guide for NetBSD developers](http://www.netbsd.org/developers/pgp.html#manage-recommendations)
 - [Creating GPG Keys, Fedora Project](https://fedoraproject.org/wiki/Creating_GPG_Keys#GPG_Key_Revocation)
+
+### Appendix A. Tips for GnuPG
+#### Confirm which public keys are used for encryption
+You can use '[--list-packets](https://www.gnupg.org/documentation/manuals/gnupg/Operational-GPG-Commands.html)' option if you would like to confirm which public keys are used for encryption.
+This option allows you to do only decryption process, then you can see key IDs for encryption or signature.
+According to [the post](http://superuser.com/questions/696941/human-readable-dump-of-gpg-public-key) on superuser, you can use [pgpdump](https://github.com/kazu-yamamoto/pgpdump) to get similar result.
+
+Example below:
+```
+$> gpg2.exe --list-packets generateKeysByGpg.md.gpg
+:pubkey enc packet: version 3, algo 16, keyid 5DCCAED8C76A2B46
+        data: [2047 bits]
+        data: [2047 bits]
+:encrypted data packet:
+        length: unknown
+        mdc_method: 2
+gpg: 2048-ビットELG鍵, ID C76A2B46, 日付2015-03-20に暗号化されました
+      "IPA Security Center Vulnerability Information (FY27) <vuln-info@ipa.go.jp>"
+gpg: 復号に失敗しました: No secret key
+```
+The file, generateKeysByGpg.md.gpg, was encrypted by [public key for IPA/ISEC](https://www.ipa.go.jp/security/pgp/vuln_fy27.asc).
