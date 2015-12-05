@@ -272,6 +272,17 @@
 - Comment
   - “As follows” is another commonly used expression. As you mentioned in your example, “The details are as follows” is correct!
 
+#### [「Each other」と「One another」の違いを解き明かす](http://hapaeikaiwa.com/2015/07/02/%E3%80%8Ceach-other%E3%80%8D%E3%81%A8%E3%80%8Cone-another%E3%80%8D%E3%81%AE%E9%81%95%E3%81%84%E3%82%92%E8%A7%A3%E3%81%8D%E6%98%8E%E3%81%8B%E3%81%99/)
+- “Each other”と“One another”は明確な違いは特になく、両方とも2人もしくは3人以上における「お互い」を意味します。
+- each other
+  - Those two dogs are chasing each other.
+  - They are blaming each other.
+  - We email each other once a month.
+- one another
+  - Those two dogs are chasing one another.
+  - They are blaming one another.
+  - We email one another once a month.
+
 #### [英文メールの基本ルール【書き出し(頭語)編】](http://hapaeikaiwa.com/2014/02/07/%E8%8B%B1%E8%AA%9E%E3%81%A7%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9%EF%BC%9A%E3%80%8C%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%80%8D%E3%81%A8%E3%80%8C%E3%82%AB%E3%82%B8%E3%83%A5/)
 
 #### [英文メールの基本ルール【結び編】](http://hapaeikaiwa.com/2014/02/26/%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%AE%E7%B5%90%E3%81%B3%E3%81%AE%E8%A8%80%E8%91%89%EF%BC%9A%E3%80%8C%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%AB%E3%80%8D%E3%81%A8%E3%80%8C%E3%82%A4%E3%83%B3%E3%83%95/)
@@ -301,3 +312,24 @@
 - As you already know, I am running for office.
 
 #### [Toとforの使い分け　ネイティブの意見](http://www.eigowithluke.com/2010/08/to%E3%81%A8for%E3%81%AE%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91/)
+
+### Others
+#### [｢～と思う」の　の英語表現](http://d.hatena.ne.jp/nsishikata/20080327)
+- think
+  - 「考える，思う」など物事を心で冷静にとらえる
+  - to use your mind to consider something,　to have ideas,words images in your mind
+- suppose
+  - 「だと思う」と不確かなことを述べるときに
+  - to make a statement less direct or less strong
+- imagine
+  - 「想像する」とこころに描くような内容を述べる」
+  - to form a picture in your mind of what something might be like
+- assume
+  - 「と想定する｣明確な証拠はなくても憶測する
+  - to think or accept that sth is true but without　having proof of it
+- hope
+  - 「そうなればいいと思う」ことを述べる。
+  - to want something to happen and think it is possible
+- be afraid
+  - そうなってほしくないと思う
+  - to worry that something undesirable will occur or to be done
