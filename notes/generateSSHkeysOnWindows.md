@@ -54,6 +54,13 @@ This is quoted from http://d.hatena.ne.jp/hnw/20140705 (in Japanese).
 $ ssh-keygen -l -f $HOME/.ssh/id_rsa.pub
 ```
 
+### Calculate the fingerprint for SSH key
+You can use '[ssh-keygen](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/ssh-keygen.1?query=ssh-keygen)' command with options '-l' and '-f' if you would like know the fingerprint for a SSH key. Then, the option '-E' allows you to change hash algorithm for fingerprint; I know this from [the post](http://superuser.com/questions/421997/what-is-a-ssh-key-fingerprint-and-how-is-it-generated) on superuser.
+```
+$ ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key.pub
+$ ssh-keygen -l -E md5 -f ~/.ssh/id_rsa.pub
+```
+
 ### Use multiple SSH keys
 This is quoted from http://d.hatena.ne.jp/MIZUNO/20080705/1215238138 (in Japanese).
 ```
