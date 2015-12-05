@@ -110,7 +110,7 @@
 
 #### pp.469-474 第25章 指示
 - For 名詞, (please) 動詞
-　- For details, click the More button.
+  - For details, click the More button.
 - (Please) 動詞 + while ～
   - Please wait while upgrading the software...
 - (Please) 動詞 + until ～
