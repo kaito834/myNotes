@@ -313,6 +313,39 @@
 
 #### [Toとforの使い分け　ネイティブの意見](http://www.eigowithluke.com/2010/08/to%E3%81%A8for%E3%81%AE%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91/)
 
+### [ネイティブはこう使う！マンガでわかる前置詞](http://www.amazon.co.jp/dp/B00PKW3DCA/)
+#### pp.8-15 前置詞のビジュアル図解
+#### p.26 レッスン2 in～、on～①
+- at と on と in の違い
+  - in: 週、月、年、世紀、季節
+  - on: 日付、曜日
+  - at: 時刻
+
+#### p.50 レッスン8 during～、for～
+- during と for の違い
+  - during + 名詞
+  - for + 数字
+  - ※必ずしもこうならない場合があります
+
+#### p.59 レッスン1 at～、in～
+- at the station
+  - 「駅の中」も「駅の入り口」も「駅の駐車場」も at the station で表すことができます
+  - 「どこにいるの？」と聞かれて所在をはっきりさせる場合にはふさわしくありません
+- in the station
+  - 「駅という入れ物の中にいる」→「駅構内にいる」ことを示します
+
+#### p.88 レッスン8 under～、below～
+- 「～以上」「～未満」などの表現
+  - 「～超」
+    - over ～, above ～, more than ～
+  - 「～未満」
+    - under ～, below ～, less than ～
+  - 「～以上」
+    - ～ and over/～ or over, ～ and above/～ or above
+  - 「～以下」
+    - ～ or under, ～ or below, ～ or less
+  - ※数量を表す場合、under も below も同じように使えます
+
 ### Others
 #### [｢～と思う」の　の英語表現](http://d.hatena.ne.jp/nsishikata/20080327)
 - think
