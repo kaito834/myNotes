@@ -38,7 +38,7 @@ function decodeBase64(){
 	$str = $args[0]
 	if ($str.Contains('-')){ $str = $str.Replace('-', '+') }
 	if ($str.Contains('_')){ $str = $str.Replace('_', '/') }
-	$str = $str + '=' * (4 - $str.Length % 4)
+	if ($str.Length -gt 0 ){ $str = $str + '=' * (4 - $str.Length % 4) }
 
 	[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($str))
 }
