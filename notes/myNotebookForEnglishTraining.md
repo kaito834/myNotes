@@ -346,6 +346,24 @@
     - ～ or under, ～ or below, ～ or less
   - ※数量を表す場合、under も below も同じように使えます
 
+### [どんどん話すための瞬間英作文トレーニング](http://www.amazon.co.jp/CD-ebook/dp/B00UCUNAKU/)
+#### pp.88-89 5 SVO + to (for), Part 2 中学 2 年レベル
+ワンポイントアドバイス
+> この時、to と for の使い分けに迷う人が多いですが、一般に「与える」「見せる」
+> 「手紙を書く」など受け手を前提とする動詞は to を、「作る」「料理をする」など
+> 必ずしも受け手が必要ではなく、「(わざわざ)～のために」という意味合いになる
+> 時は for を使うと考えるとわかりやすいでしょう。
+
+#### pp.92-93 7 will(単純未来), Part 2 中学 2 年レベル
+- お昼ご飯がもうじきできるわよ。
+  - Lunch will **be ready** soon.
+- 彼の手紙は数日後に届く（到着する）でしょう。
+  - His letter will arrive **in a few days**.
+
+#### pp.94-95 8 will(意志未来), Part 2 中学 2 年レベル
+- 一週間したら戻ってくるからね。
+  - I will be back **in a week**.
+
 ### Others
 #### [｢～と思う」の　の英語表現](http://d.hatena.ne.jp/nsishikata/20080327)
 - think
