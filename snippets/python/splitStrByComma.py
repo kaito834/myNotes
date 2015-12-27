@@ -9,6 +9,10 @@ def main():
 
     # https://docs.python.org/3/library/stdtypes.html#string-methods
     # p.87, 4.2.5 リストのメソッド, ”Python文法詳解", O'REILLY
+    #
+    # You can use CSV library if you read values from CSV file.
+    # https://docs.python.org/3/library/csv.html
+    # pp.156-160 8.1 CSVファイルを扱う, 'Pythonライブラリ厳選レシピ', http://gihyo.jp/book/2015/978-4-7741-7707-6
     for n in str.split(','):
         n = n.strip()
         if(n.isdecimal() and 0 <= int(n) <= 10 and numbers.count(int(n)) == 0):
