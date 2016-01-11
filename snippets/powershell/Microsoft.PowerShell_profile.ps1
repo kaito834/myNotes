@@ -13,11 +13,11 @@
 
 # https://msdn.microsoft.com/en-us/library/system.web.httputility.aspx
 Add-Type -AssemblyName System.Web
-function urlEncode(){
+function encodeUrl(){
 	[Web.Httputility]::UrlEncode($args[0])
 }
 
-function urlDecode(){
+function decodeUrl(){
 	[Web.Httputility]::UrlDecode($args[0])
 }
 
