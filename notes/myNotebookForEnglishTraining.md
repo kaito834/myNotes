@@ -384,3 +384,24 @@
 - be afraid
   - そうなってほしくないと思う
   - to worry that something undesirable will occur or to be done
+
+#### [「思う」「考える」がこんなにたくさん！ “consider” “think” “suppose” の違いと使い分け方](http://eikaiwa.dmm.com/blog/english/think/) on DMM英会話ブログ
+- “consider”はじっくりと考慮するときに！
+  - Synonym: regard, deem
+  - I consider it meaningless.
+  - Until then, I had never considered changing careers.
+- “think” は自分がどう感じるかを意見するときに！
+  - Synonym: feel, guess, assume
+  - I think he likes me.
+  - I think he is lying.
+- “suppose”は半信半疑のニュアンス！
+  - I suppose everything is going to be all right.
+  - I suppose you are right.
+
+#### [『に関して』という英語の使い分け](http://alcom.alc.co.jp/questions/show/7094) on Alcom World
+- **As for** the journey, we will decide that later.
+  - **Regarding** the journey, we will decide that later.
+- **As for** myself, I'm not satisfied.
+- What do you have to say **in [with] regard to** this matter?
+- **In this regards**, I would appreciate it if you could visit our office.
+- **In this regard**, could you please inform me of a few dates and times that are conveinient for you?
