@@ -119,6 +119,26 @@ function convertEpochToDateAndTime(){
 	Write-Host('Local:	', $datetime)
 }
 
+# Get the value of clipboard
+# This function is based on http://winscript.jp/powershell/229 (in Japanese)
+function Get-ClipBoard(){
+	Add-Type -AssemblyName System.Windows.Forms
+	$tb = New-Object System.Windows.Forms.TextBox
+	$tb.Multiline = $true
+
+	# https://msdn.microsoft.com/en-us/library/system.windows.forms.textboxbase.maxlength.aspx
+	# > The default is 32767.
+	$tb.MaxLength = 0
+	$tb.Paste()
+
+	# $tb.Text -replace "`r`n","`n" -replace "`r","`n"  -split "`n"
+	#
+	# http://winscript.jp/powershell/198 (in Japanese)
+	# $tb.Text with -split return Object[]; Confirmed by (Get-ClipBoard).GetType()
+	# $tb.Text without -split return String
+	$tb.Text -replace "`r`n","`n" -replace "`r","`n"
+}
+
 ### TBD(To Be Determined)
 # Compress some files or directories into Zip format.
 # Or, uncompress Zip file.
