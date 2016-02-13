@@ -15,7 +15,6 @@ The key's randomart image is:
 $ echo "IdentityFile ~/.ssh/id_rsa-20150802" >> ~/.ssh/config
 ```
 
-## References
 ### Tools
 - [ssh-keygen](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/ssh-keygen.1?query=ssh-keygen&sec=1)
   - "[Git for Windows(msysgit)](https://msysgit.github.io/)" and "[GitHub for Windows](https://windows.github.com/)" contain it.
@@ -29,39 +28,38 @@ There have been three file formats for SSH keys. According to [PuTTY document](h
 - [PuTTY's native format(*.PPK)](http://the.earth.li/~sgtatham/putty/0.64/htmldoc/Chapter8.html#puttygen-savepriv)
 - SECSH format, [RFC4716](https://tools.ietf.org/html/rfc4716)
 
-### Others
+### References
 - [SSHの秘密鍵について - 禿散らかしてごめんなさい](http://d.hatena.ne.jp/machua/20110809/1312899353) (in Japanese)
 - [Generating SSH keys, GitHub Help](https://help.github.com/articles/generating-ssh-keys/)
 - [ssh_config, OpenBSD manual pages](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man5/ssh_config.5)
 
-## Appendix 1. Tips for SSH
-### Register public key for someone on remote host
+## Register public key for someone on remote host
 "13.2.4. Using Key-Based Authentication" on [Red Hat Enterprise Linux 6
 Deployment Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/s2-ssh-configuration-keypairs.html)
 > 5.
 > Copy the content of ~/.ssh/id_rsa.pub into the ~/.ssh/authorized_keys on the machine to which you want
 > to connect, appending it to its end if the file already exists.
 
-### Convert SECSH(RFC4716) format to others
+## Convert SECSH(RFC4716) format to others
 This is quoted from http://qiita.com/marcie001/items/47a23cfeed00db783d39 (in Japanese).
 ```
 $ ssh-keygen -i -f id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 
-### Identify a size of SSH key
+## Identify a size of SSH key
 This is quoted from http://d.hatena.ne.jp/hnw/20140705 (in Japanese).
 ```
 $ ssh-keygen -l -f $HOME/.ssh/id_rsa.pub
 ```
 
-### Calculate the fingerprint for SSH key
+## Calculate the fingerprint for SSH key
 You can use '[ssh-keygen](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/ssh-keygen.1?query=ssh-keygen)' command with options '-l' and '-f' if you would like know the fingerprint for a SSH key. Then, the option '-E' allows you to change hash algorithm for fingerprint; I know this from [the post](http://superuser.com/questions/421997/what-is-a-ssh-key-fingerprint-and-how-is-it-generated) on superuser.
 ```
 $ ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key.pub
 $ ssh-keygen -l -E md5 -f ~/.ssh/id_rsa.pub
 ```
 
-### Use multiple SSH keys
+## Use multiple SSH keys
 This is quoted from http://d.hatena.ne.jp/MIZUNO/20080705/1215238138 (in Japanese).
 ```
 $ ssh -i ~/.ssh/id_rsa.hoge hoge@fuga.com
@@ -73,7 +71,7 @@ IdentityFile ~/.ssh/id_rsa.hoge
 IdentityFile ~/.ssh/id_rsa.foo
 ```
 
-## Appendix 2. How do I know SSH host key on Web services
+## How do I know SSH host key on Web services
 - GitHub
   - "[_What are GitHub's SSH key fingerprints?_](https://help.github.com/articles/what-are-github-s-ssh-key-fingerprints/)" on GitHub Help shows me its SSH host key.
 - Amazon EC2
