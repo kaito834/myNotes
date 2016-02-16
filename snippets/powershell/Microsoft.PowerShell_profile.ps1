@@ -122,6 +122,12 @@ function convertEpochToDateAndTime(){
 # Get the value of clipboard
 # This function is based on http://winscript.jp/powershell/229 (in Japanese)
 function Get-ClipBoard(){
+	# https://technet.microsoft.com/en-us/magazine/jj554301.aspx
+	param(
+		[switch]
+		$splitLine
+	)
+
 	Add-Type -AssemblyName System.Windows.Forms
 	$tb = New-Object System.Windows.Forms.TextBox
 	$tb.Multiline = $true
@@ -131,12 +137,14 @@ function Get-ClipBoard(){
 	$tb.MaxLength = 0
 	$tb.Paste()
 
-	# $tb.Text -replace "`r`n","`n" -replace "`r","`n"  -split "`n"
-	#
 	# http://winscript.jp/powershell/198 (in Japanese)
 	# $tb.Text with -split return Object[]; Confirmed by (Get-ClipBoard).GetType()
 	# $tb.Text without -split return String
-	$tb.Text -replace "`r`n","`n" -replace "`r","`n"
+	if ($splitLine){
+		$tb.Text -replace "`r`n","`n" -replace "`r","`n"  -split "`n"
+	}else{
+		$tb.Text -replace "`r`n","`n" -replace "`r","`n"
+	}
 }
 
 ### TBD(To Be Determined)
