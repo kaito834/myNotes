@@ -4,8 +4,10 @@
 # References
 # http://winscript.jp/powershell/253 (in Japanese)
 # http://winscript.jp/powershell/305 (in Japanese)
+# http://tech.blog.aerie.jp/entry/2014/04/21/115311 (in Japanese)
 param(
   [Parameter(ValueFromPipeline=$true,Mandatory=$true)]
+  [ValidatePattern('^[cC][vV][eE]\-[0-9]{4}\-[0-9]{4}$')]
   [string]
   $Cve
 )
