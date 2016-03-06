@@ -364,6 +364,51 @@
 - 一週間したら戻ってくるからね。
   - I will be back **in a week**.
 
+### [ビジネス英語ライティング・ルールズ](http://www.amazon.co.jp/dp/4532113369/)
+#### ②よく使う接続副詞（句）, 07 Conjunctive Adverbs
+- after all「とにかく、結局」
+  - 「どっちみち」、「結局のところ」、「やっぱり」などのニュアンス
+  - After all, we can't expect to be able to compare with XYZ unless we offer the best quality products we can.
+- as a result「その結果」
+  - We were unable to get the right packing material in time, and as a result, your delivery will be two days behind schedule.
+- besides「その上、さらに」
+  - 「それに加えて」というニュアンスで、理由などを付け加えて示す場合に使います。
+  - That's no need to rush on your progress report this time. Besides, we still haven't received the results of the quality inspection yet.
+- for example「例えば」
+  - 同じく「例えば」という意味で使われる for instance は、どちらかと言うと、具体的な「事象」を示すときに使われる傾向があります。
+  - I was thinking we could try a new design for our line of summer umbrellas. For example, we could try obtaining the rights to use recent popular TV show characters.
+- hence「それゆえに、だから」
+  - 前の文が、後の文の「要因」になっていることを示す接続副詞
+  - We'll be starting a new line of products in December; hence, we bought the new equipment you see on the production floor.
+- in contrast「対照的に」
+  - 「それに引きかえ」のようなニュアンスで、前後の文が対照的な内容になっていることを強調
+  - DEF's products may be cheaper, but they are notoriously prone to defects and breakdowns. In contrast, our products are a little more expensive, but we believe the quality we offer is worth every penny.
+- in other words「言い換えると」
+  - namely や videlicet なども、ほぼ同じ意味の表現です。なお、videlicet は、文中では省略形の viz. という形で示されることがありますが、読むときには namely と発音します。
+  - In other words, our sales forecast for the next fiscal year is overwhelmingly positive, so long as we don't encounter any unforeseen economic disasters.
+- in short「つまり」
+  - 「丁寧に言えば」という意味で、put simply などと言い換えることも可能です。
+  - Our new model of microwave features an oven setting, a toaster setting and adjustable heat settings. In short, it's everything your kitchen will ever need.
+- on the other hand「一方」
+  - あるものとあるものを対比する場合に用いられます。
+  - The strong yen will make it harder to ship our products overseas, but on the other hand, it'll be cheaper for us to import raw materials.
+- specifically「具体的には」
+  - 「具体的に言えば・・・」「それは何かと言うと・・・」などのようなニュアンスで、具体的な実例をあげるときに使うことができます。
+  - Due to current economic conditions and a looming increase in the consumption tax, we are going to have to increase our products prices, specifically those of our best-selling products.
+- that is to say「すなわち」
+  - in other words などと、ほとんど同じニュアンスで使うことができます。to say は省略して、that is だけで用いることもあります。
+  - This is the last chance we have this year to impress the board with our proposals. That is to say, if they don't like our ideas this time, there may not be a next time for us.
+- to put it differently「換言すると」
+  - to put it ... というパターンは意外に多く、他にも to put it another way「別の言い方をすれば」、to put it bluntly「ぶっちゃけた話」、to put it plainly「単刀直入に言えば」などの関連表現があります。
+  - It would be in our best interest to deal with ABC Company in the boardroom instead of in the mareketplace. To put it differently, I propose we suggest a merger.
+- to say the least「控え目に言っても」
+  - to say the least of it とも言います。
+  - This report is rife with spelling, grammar and punctuation errors, and every paragraph is in a different font. It's completely unacceptable, to say the least.
+- notwithstanding「それにもかかわらず」
+  - notwithstanding the fact that ...「・・・という事実があるにもかかわらず」のように、前置詞的な使われ方もされます。
+  - The global economy finally seems to be showing signs of recovery, but there have been a few dips in the stock market notwithstanding.
+
+
 ### Others
 #### [｢～と思う」の　の英語表現](http://d.hatena.ne.jp/nsishikata/20080327)
 - think
