@@ -1,0 +1,12 @@
+## SSL/TLS Best Practice
+- [Transport Layer Protection Cheat Sheet, OWASP](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
+- [SSL/TLS Deployment Best Practices(PDF), Qualys SSL Labs](https://www.ssllabs.com/downloads/SSL_TLS_Deployment_Best_Practices.pdf)
+  - via https://www.ssllabs.com/projects/best-practices/index.html
+  - 1.2. Protect Private Keys, 1. Private Key and Certificate
+    - Restrict access to private Key
+    - Generate private key and CSR on trusted computer
+    - Protect private key by password in backup system
+      - *Private key passwords don’t help much in production because a knowledgeable attacker can always retrieve the keys from process memory*
+    - Revoke old certificate and generate new key after compromise
+    - Renew certificate every year, always with new private key
+- [Security/Server Side TLS, Mozilla Wiki](https://wiki.mozilla.org/Security/Server_Side_TLS)
