@@ -39,10 +39,18 @@ Finally, the CSR is signed by the private key below. This self-signed certificat
 will be expired a year later; this expiration period is based on the option "-days".
 The option "-sha256" is set as same as generating CSR.
 
-You can confirm the details of self-signed certificate by openssl x509 commmand with option "-text".
+You can confirm the details of self-signed certificate by openssl x509 command with option "-text".
 ```
 $ openssl x509 -req -sha256 -days 365 -in mycertificate.csr -signkey myprivate.key -out mycertificate-selfsigned.crt
 $ openssl x509 -text -in mycertificate-selfsigned.crt -noout
+```
+
+If necessary, openssl x509 command with "-fingerprint" allows you to confirm
+the SHA-1 fingerprint of self-signed certificate. Moreover, you can confirm
+the SHA-256 fingerprint by "-sha256".
+```
+$ openssl x509 -fingerprint -in mycertificate-selfsigned.crt -noout
+$ openssl x509 -fingerprint -sha256 -in mycertificate-selfsigned.crt -noout
 ```
 
 ### Deploy and Enable Self-Signed Certificate on Apache
