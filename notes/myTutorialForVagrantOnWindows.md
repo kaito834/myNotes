@@ -137,7 +137,7 @@ C:\USERS\KAITO\VIRTUALBOX VMS
 
 I can log in CentOS 6.5.3 via ssh. Then, I use ssh which is installed with msysgit in this tutorial.
 The *ssh* command with options '-o StrictHostKeyChecking=no' and '-o UserKnownHostsFile=/dev/null' is
-efficient. Please see [my tutorial for SSH](https://github.com/kaito834/myNotes/blob/master/notes/myTutorialForSsh.md#ignore-validation-of-SSH-host-key).
+efficient. Please see [my tutorial for SSH](https://github.com/kaito834/myNotes/blob/master/notes/myTutorialForSsh.md#ignore-validation-of-ssh-host-key).
 ```
 $ ssh -i .vagrant/machines/default/virtualbox/private_key -p 2222 vagrant@127.0.0.1
 The authenticity of host '[127.0.0.1]:2222 ([127.0.0.1]:2222)' can't be established.
