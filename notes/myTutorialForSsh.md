@@ -71,6 +71,49 @@ IdentityFile ~/.ssh/id_rsa.hoge
 IdentityFile ~/.ssh/id_rsa.foo
 ```
 
+### Ignore validation of SSH host key
+The *ssh* command will validate SSH host key of remote host by default, then
+it compares the host key with one recorded in known_hosts.
+If the validation fails, SSH connection refused by the *ssh* command itself.
+
+This validation is good to protect man-in-the-middle attack. But, it is not
+efficient for developing environment on localhost like [CentOS on Virtualbox](https://github.com/kaito834/myNotes/blob/master/notes/myTutorialForVagrantOnWindows.md#setup-centos-653-by-vagrant).
+The SSH host key will change whenever CentOS virtual machine is created,
+so the validation of SSH host key will fail once the first SSH host key is
+registered in known_hosts; Please see the example below:
+```
+$ ssh -i .vagrant/machines/default/virtualbox/private_key -p 2222 vagrant@127.0.0.1
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the RSA key sent by the remote host is
+fc:9b:3f:5a:1a:25:b2:c2:c6:1e:6e:86:64:ed:63:e6.
+Please contact your system administrator.
+Add correct host key in /c/Users/kaito/.ssh/known_hosts to get rid of this message.
+Offending RSA key in /c/Users/kaito/.ssh/known_hosts:7
+RSA host key for [127.0.0.1]:2222 has changed and you have requested strict checking.
+Host key verification failed.
+```
+
+Ignoring known_hosts is useful in this situation. The options '-o StrictHostKeyChecking=no' and
+'-o UserKnownHostsFile=/dev/null' allow you to ignore known_hosts. For *StrictHostKeyChecking* and
+*UserKnownHostsFile*, please see the [manual for sshd_config](http://man.openbsd.org/OpenBSD-current/man5/ssh_config.5).
+
+When *ssh* command with these two options is executed below, you can connect remote host
+by SSH without the validation of SSH host key. Then, the *ssh* command write the host key to
+/dev/null; equal to do nothing.
+```
+$ ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i .vagrant/machines/default/virtualbox/private_key -p 2222 vagrant@127.0.0.1
+Warning: Permanently added '[127.0.0.1]:2222' (RSA) to the list of known hosts.
+[vagrant@vagrant-centos65 ~]$
+```
+
+### Reference
+- [OpenSSHの警告メッセージを黙らせる](https://siguniang.wordpress.com/2014/02/28/get-rid-of-openssh-warning-message/) (In Japanese)
+
 ## How do I know SSH host key on Web services
 - GitHub
   - "[_What are GitHub's SSH key fingerprints?_](https://help.github.com/articles/what-are-github-s-ssh-key-fingerprints/)" on GitHub Help shows me its SSH host key.
