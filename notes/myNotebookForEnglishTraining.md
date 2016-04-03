@@ -283,6 +283,26 @@
   - They are blaming one another.
   - We email one another once a month.
 
+#### [英表現を豊かにする「wonder」の役割](http://hapaeikaiwa.com/2015/08/25/%E8%8B%B1%E8%A1%A8%E7%8F%BE%E3%82%92%E8%B1%8A%E3%81%8B%E3%81%AB%E3%81%99%E3%82%8B%E3%80%8Cwonder%E3%80%8D%E3%81%AE%E5%BD%B9%E5%89%B2/)
+- I wonder
+  - I wonder why she cut her hair.
+  - I wonder when he is going to get married.
+  - I wonder who is coming to the party.
+- I wonder if
+  - I wonder if he is allergic to cats.
+  - I wonder if it’s going to rain tomorrow.
+  - I wonder if I should call her.
+- I was wondering if
+  - *「Can you _____?」より丁寧だけど「Would/Could you _____?」ほど堅苦しくなく、カジュアルで丁寧な表現方法です。*
+  - *ファオーマルな場で使うというよりは、親しい関係の人に丁寧にお願いする場で使われます。*
+  - I was wondering if you could drop me off at the train station.
+  - I was wondering if I could stay at your place tonight.
+  - I was wondering if Stan could look over my essay.
+- No wonder
+  - No wonder she was late.
+  - No wonder I couldn’t get a hold of you. I called so many time.
+  - No wonder! I was wondering why she’s so fluent in Chinese.
+
 #### [英文メールの基本ルール【書き出し(頭語)編】](http://hapaeikaiwa.com/2014/02/07/%E8%8B%B1%E8%AA%9E%E3%81%A7%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9%EF%BC%9A%E3%80%8C%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%80%8D%E3%81%A8%E3%80%8C%E3%82%AB%E3%82%B8%E3%83%A5/)
 
 #### [英文メールの基本ルール【結び編】](http://hapaeikaiwa.com/2014/02/26/%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%AE%E7%B5%90%E3%81%B3%E3%81%AE%E8%A8%80%E8%91%89%EF%BC%9A%E3%80%8C%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%AB%E3%80%8D%E3%81%A8%E3%80%8C%E3%82%A4%E3%83%B3%E3%83%95/)
