@@ -31,6 +31,11 @@ def main():
     print(json.dumps(jsonDic, ensure_ascii=True, sort_keys=True, indent=4))
 
     # Add key 12345(int) and value 'test'(string) to jsonDic
+    # TypeError raised with Python 3.4.3 or 3.5.1 on Windows 8.1; detail is "unorderable types: int() < str()"
+    # No TypeError raise if 12345 is replaced to '12345', class str
+    #
+    # Accroding to Notes in https://docs.python.org/3/library/json.html#json.dumps,
+    # it is corret even though the key of dictionary is class int
     jsonDic[12345] = 'test'
     try:
         print("## Added key 12345(int) and value 'test'(string) to jsonDic")
