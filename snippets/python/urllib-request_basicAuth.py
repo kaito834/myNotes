@@ -6,6 +6,7 @@
 import urllib.request
 import urllib.error
 import getpass
+import os
 
 # If you access to url below via Proxy,
 # you can use environment variable 'http_proxy' without urllib.request.ProxyHandler.
@@ -17,7 +18,13 @@ proxyhandler = urllib.request.ProxyHandler({'http': 'http://127.0.0.1:8080/', 'h
 # https://docs.python.org/3/library/functions.html#input
 # https://docs.python.org/3/library/getpass.html
 auth_user=input('Username: ')
-auth_passwd=getpass.getpass('Password: ')
+# https://docs.python.org/3/library/os.html#os.getenv
+# Please set X_GW_BASIC_PASSWORD as environment variable before executing this snippet
+if os.getenv('X_GW_BASIC_PASSWORD') is None:
+    auth_passwd=getpass.getpass('Password: ')
+else:
+    print('Set Password from environment variable, X_GW_BASIC_PASSWORD.')
+    auth_passwd=os.getenv('X_GW_BASIC_PASSWORD')
 
 # https://docs.python.org/3.4/howto/urllib2.html#id5
 #
