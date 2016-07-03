@@ -1,3 +1,70 @@
+## My Usage of *openssl* Command
+Environment:
+- Windows 10
+- OpenSSL 1.0.2h  3 May 2016; included [Git for Windows 2.9.0](https://git-scm.com/download/win)
+
+### Parse SSL/TLS Certificate
+Retrieve SSL/TLS certificate by [openssl s_client](https://www.openssl.org/docs/manmaster/apps/s_client.html) with "-showcerts" option. You need '-proxy' option too if you access via proxy server; Note old *openssl* command [is not implemented the '-proxy' option](http://stackoverflow.com/questions/3220419/openssl-s-client-using-a-proxy).
+
+For the example below, SSL/TLS certificate on www.openssl.org is retrieved. The SSL/TLS certificate is base64 encoded strings between '-----BEGIN CERTIFICATE-----' and '-----END CERTIFICATE-----'. *openssl s_client* command will output all certificates if certificates are chained. Save the certificate you want to parse into text file.
+```
+$ openssl s_client -connect www.openssl.org:443 -showcerts
+CONNECTED(000001B0)
+---
+Certificate chain
+ 0 s:/OU=Domain Control Validated/CN=*.openssl.org
+   i:/C=BE/O=GlobalSign nv-sa/CN=GlobalSign Domain Validation CA - SHA256 - G2
+-----BEGIN CERTIFICATE-----
+MIIE9TCCA92gAwIBAgISESHQqr5sLPE1xTXWmA7ABqljMA0GCSqGSIb3DQEBCwUA
+MGAxCzAJBgNVBAYTAkJFMRkwFwYDVQQKExBHbG9iYWxTaWduIG52LXNhMTYwNAYD
+VQQDEy1HbG9iYWxTaWduIERvbWFpbiBWYWxpZGF0aW9uIENBIC0gU0hBMjU2IC0g
+RzIwHhcNMTQxMDA5MjAyOTAwWhcNMTcxMTEyMTcxNDA1WjA7MSEwHwYDVQQLExhE
+b21haW4gQ29udHJvbCBWYWxpZGF0ZWQxFjAUBgNVBAMMDSoub3BlbnNzbC5vcmcw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCkfg71ZYW6VtWDbDEmAfDw
+CAKVJ260FAP6gANjS8eO+0drZe6MexIA5htR/sYhG8PIsJnKBuxiQ9KwMbRwLxBU
+HcuBACT3MNif1DsFWuNCMFsTDPrfJzLOgoPo+4lQ0QYARwMJhxelA0P9rcTwBACY
+6QRZgfAJ5iezz69GJkmrDGZIUoAR+PFF7xR/rzFaBMH7gbok0UJRKFPxO5fyiSfc
+ZvSmMV/AZcUGVmxE9HLBQ6QCTbAdGAdVlHHxFPVb9Of9Ze/KJg8VIwFl5Hw+RQCj
++OjtBPkSwNQ9r0Bwc2c7uRnRpojERHxlo7Tn8uJ+LYcCkWcaVc8+JbjF78F8E417
+AgMBAAGjggHMMIIByDAOBgNVHQ8BAf8EBAMCBaAwSQYDVR0gBEIwQDA+BgZngQwB
+AgEwNDAyBggrBgEFBQcCARYmaHR0cHM6Ly93d3cuZ2xvYmFsc2lnbi5jb20vcmVw
+b3NpdG9yeS8wJQYDVR0RBB4wHIINKi5vcGVuc3NsLm9yZ4ILb3BlbnNzbC5vcmcw
+CQYDVR0TBAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwQwYDVR0f
+BDwwOjA4oDagNIYyaHR0cDovL2NybC5nbG9iYWxzaWduLmNvbS9ncy9nc2RvbWFp
+bnZhbHNoYTJnMi5jcmwwgZQGCCsGAQUFBwEBBIGHMIGEMEcGCCsGAQUFBzAChjto
+dHRwOi8vc2VjdXJlLmdsb2JhbHNpZ24uY29tL2NhY2VydC9nc2RvbWFpbnZhbHNo
+YTJnMnIxLmNydDA5BggrBgEFBQcwAYYtaHR0cDovL29jc3AyLmdsb2JhbHNpZ24u
+Y29tL2dzZG9tYWludmFsc2hhMmcyMB0GA1UdDgQWBBQPVUooul4mMU0KrqGTBtQ6
+ZtRofjAfBgNVHSMEGDAWgBTqTnzUgC3lFYGGJoyCbcCYpM+XDzANBgkqhkiG9w0B
+AQsFAAOCAQEAiJDoinZmR2M9Zlap1DM9WOHgwIMot154eNPZyf27rYxv9kekdTAp
+9fesfBScMzq9NCyzy8rtWxMCPyhpCXh9iibkC3Yon+sj/gZSrNNh2nfeKhuroBxi
+alaGRjg1WHNKx4Wc5dGm+chJCZFWOk1NzB8JZQQcSNt3IFyDWSScEGXwiVe1VbUa
+tYIohSiWzvFMEfj7YoXt6tihYqEJG42jBg7MhaUtI4rUSDC5LB20Zhv0OG5CRORj
+Wg8Iz2SUXkH8F1RJo+kMbCC/DFeII/ZTrF+B7qRVvLkctlLcukylqvsE1vibozQb
+0A8/RZkfkqobqnkLnYeLUSCWNx/AHm8L5w==
+-----END CERTIFICATE-----
+ 1 s:/C=BE/O=GlobalSign nv-sa/CN=GlobalSign Domain Validation CA - SHA256 - G2
+   i:/C=BE/O=GlobalSign nv-sa/OU=Root CA/CN=GlobalSign Root CA
+(snip)
+```
+
+Parse the text file by *openssl x509* command with '-in' and '-text' options.
+```
+$ openssl.exe x509 -in a.pem -text
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            11:21:d0:aa:be:6c:2c:f1:35:c5:35:d6:98:0e:c0:06:a9:63
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=BE, O=GlobalSign nv-sa, CN=GlobalSign Domain Validation CA - SHA256 - G2
+        Validity
+            Not Before: Oct  9 20:29:00 2014 GMT
+            Not After : Nov 12 17:14:05 2017 GMT
+        Subject: OU=Domain Control Validated, CN=*.openssl.org
+(snip)
+```
+
 ## Self-Signed Certificate
 ### Environment
 - VirtualBox 5.0.16 r105871
