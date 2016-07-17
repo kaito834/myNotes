@@ -96,6 +96,8 @@ CSR is "*a formal request asking a CA to sign a certificate, and it contains the
 The digest is calculated by SHA-1 in this version of openssl command.
 So, the option "-sha256" is set in this case to calculate the digest by SHA-256.
 
+Need to set option '--config' with the path for openssl.cnf if openssl.cnf is not found; Related post on stackoverflow is [here](http://stackoverflow.com/questions/7360602/openssl-and-error-in-reading-openssl-conf-file). Error:'Unable to load config info from /usr/local/ssl/openssl.cnf' has raised by openssl command included in [Git for Windows](https://git-scm.com/download/win).
+
 To confirm the details of CSR, run openssl req command with option "-text".
 ```
 $ openssl req -new -sha256 -key myprivate.key -out mycertificate.csr
