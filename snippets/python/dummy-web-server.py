@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# coding: utf-8
 """
 Very simple HTTP server in python.
 
