@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>XMLHttpRequest with Accept header which includes HTML elements</title>
+  <script>
+    function sendXhr(){
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'http://127.0.0.1:8888/', 'true');
+      // Ref.
+      // 4.11.1.2 Restrictions for contents of script elements, https://www.w3.org/TR/html5/scripting-1.html#restrictions-for-contents-of-script-elements
+      // p.112 script要素のXSS, 4.3 表示処理に伴う問題, "体系的に学ぶ 安全なWebアプリケーションの作り方 初版第4刷"
+      xhr.setRequestHeader('Accept', "*/*<html><head><sciprt>alert(1)<\/script><\/head><\/html>");
+      xhr.onreadystatechange = function(){};
+      xhr.send();
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){
+      sendXhr();
+      //console.log("Send XHLHttpRequest with Accept header which includes HTML elements")
+    }, false)
+  </script>
+</head>
+<body>
+  <p>Hello, sample!</p>
+</body>
+</html>
