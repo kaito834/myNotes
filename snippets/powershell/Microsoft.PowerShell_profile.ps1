@@ -128,6 +128,16 @@ function convertEpochToDateAndTime(){
 	Write-Host('Local:	', $datetime)
 }
 
+# Convert date and time to Epoch time
+function convertDateAndTimeToEpoch(){
+	# https://technet.microsoft.com/ja-JP/library/dd347647.aspx
+	$datetime=(Get-Date $args[0]).ToUniversalTime()
+	Write-Host('Convert Local timezone to UTC')
+	Write-Host('Local:	', $args[0])
+	Write-Host('UTC:	', $datetime)
+	[int][double]::Parse((Get-Date $datetime -UFormat %s))
+}
+
 # Get the value of clipboard
 # This function is based on http://winscript.jp/powershell/229 (in Japanese)
 function Get-ClipBoard(){
