@@ -31,7 +31,16 @@ function encodeBase64(){
 	[System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($args[0]))
 }
 
+function encodeBase64url(){
+	# http://stackoverflow.com/questions/26353710/how-to-achieve-base64-url-safe-encoding-in-c
+	[System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($args[0])).TrimEnd('=').Replace('+', '-').Replace('/', '_')
+}
+
 function decodeBase64(){
+	[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($arg[0]))
+}
+
+function decodeBase64url(){
 	# Convert base64url to base64
 	# https://github.com/projectkudu/slingshot/issues/27
 	# http://tools.ietf.org/html/rfc4648#section-5
