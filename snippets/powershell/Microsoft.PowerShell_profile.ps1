@@ -21,6 +21,16 @@ function decodeUrl(){
 	[Web.Httputility]::UrlDecode($args[0])
 }
 
+# http://stackoverflow.com/questions/10082217/what-is-the-best-way-to-escape-html-specific-characters-in-a-string-powershell
+# https://msdn.microsoft.com/ja-jp/library/73z22y6h.aspx
+function encodeHtml(){
+	$str = $args[0]
+	[Web.Httputility]::HtmlEncode($str)
+}
+
+function decodeHtml(){
+	[Web.Httputility]::HtmlDecode($args[0])
+}
 
 # Windows PowerShell Blog: Base64 Encode/Decode a string
 # http://blogs.msdn.com/b/powershell/archive/2006/04/25/583265.aspx
