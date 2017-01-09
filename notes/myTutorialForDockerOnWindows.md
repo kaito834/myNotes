@@ -11,7 +11,7 @@
 2. Reboot Windows 10 to enable Hyper-V (if Hyper-V is disabled)
   * You can find the dialog window on https://www.kaitoy.xyz/2016/07/31/docker-for-windows/
 3. Confirm that Docker is running after reboot
-  * For my setup, "Unable to start: The VM couldn't get an IP address after 60 tries" error happened
+  * For my setup, "[Unable to start: The VM couldn't get an IP address after 60 tries](/images/dockerForWindows_error.png)" error happened
     + After rebooting Windows 10 again, Docker was running correctly.
     + If the error would not be resolved by the reboot, the [workaround](https://github.com/docker/for-win/issues/54#issuecomment-257157813) I found would be necessary
 4. Open command prompt and check the version of docker commands below
