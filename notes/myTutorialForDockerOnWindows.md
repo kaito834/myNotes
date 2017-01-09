@@ -18,16 +18,17 @@
   * *docker --version*
   * *docker-compose --version*
   * *docker-machine --version*
-5. Run *docker run hello-world* on the command prompt. Outputting messages below means docker is running correctly
+5. Run *set DOCKER_CONTENT_TRUST=1* to enable [*content trust*](https://docs.docker.com/engine/security/trust/content_trust/#/enable-and-disable-content-trust-per-shell-or-per-invocation)
+6. Run *docker run hello-world* on the command prompt. Outputting messages below means docker is running correctly
 
 ```
 C:\Users\kaito>docker run hello-world
 Unable to find image 'hello-world:latest' locally
-latest: Pulling from library/hello-world
-
-c04b14da8d14: Pull complete
+sha256:0256e8a36e2070f7bf2d0b0763dbabdd67798512411de4cdcf9431a1feb60fd9: Pulling from library/hello-world
+c04b14da8d14: Already exists
 Digest: sha256:0256e8a36e2070f7bf2d0b0763dbabdd67798512411de4cdcf9431a1feb60fd9
-Status: Downloaded newer image for hello-world:latest
+Status: Downloaded newer image for hello-world@sha256:0256e8a36e2070f7bf2d0b0763dbabdd67798512411de4cdcf9431a1feb60fd9
+Tagging hello-world@sha256:0256e8a36e2070f7bf2d0b0763dbabdd67798512411de4cdcf9431a1feb60fd9 as hello-world:latest
 
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
@@ -52,3 +53,4 @@ For more examples and ideas, visit:
 
 ## References
 - https://docs.docker.com/docker-for-windows/
+- [プログラマのためのDocker教科書 インフラの基礎知識＆コードによる環境構築の自動化](https://www.amazon.co.jp/dp/B017UGA7NG/) (in Japanese)
