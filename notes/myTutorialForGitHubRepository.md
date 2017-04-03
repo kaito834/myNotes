@@ -28,7 +28,7 @@
   - git pull origin master
 
 
-##References
+## References
 - [BootCamp, GitHub Help](https://help.github.com/categories/bootcamp/)
 - [Keeping your email address private, GitHub Help](https://help.github.com/articles/keeping-your-email-address-private/)
 - [Adding an existing project to GitHub using the command line, GitHub Help](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
