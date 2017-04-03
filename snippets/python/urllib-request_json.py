@@ -21,13 +21,16 @@ res_body = res.read()
 # set http_proxy=http://127.0.0.1:8080/
 # set https_proxy=https://127.0.0.1:8080/
 
-# https://docs.python.org/3/library/json.html
+# https://docs.python.org/3/library/json.html#json.loads
+# *Deserialize s (a str, bytes or bytearray instance containing a JSON document) to a Python object using this conversion table.*
 # type(j) is class 'dict'
 j = json.loads(res_body.decode("utf-8"))
 
 # Output Escaped ASCII CR+LF if json.dumps() is outputed directly; print(json.dumps())
 # type(j_str) is class 'str'
 # Ref.
+# https://docs.python.org/3/library/json.html#json.dumps
+# *Serialize obj to a JSON formatted str using this conversion table.*
 # http://stackoverflow.com/questions/16318543/cant-pretty-print-json-from-python
 # http://stackoverflow.com/questions/9785049/python-how-to-use-json-dumps-on-windows
 j_str = json.dumps(j, ensure_ascii=True, sort_keys=True, indent=4)

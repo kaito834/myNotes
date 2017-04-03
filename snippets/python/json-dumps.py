@@ -25,6 +25,7 @@ def main():
     print(jsonDic)
 
     # https://docs.python.org/3/library/json.html#json.dumps
+    # *Serialize obj to a JSON formatted str using this conversion table.*
     print("## json.dumps(jsonDic, ensure_ascii=True, sort_keys=True)")
     print(json.dumps(jsonDic, ensure_ascii=True, sort_keys=True))
     print("## json.dumps(jsonDic, ensure_ascii=True, sort_keys=True, indent=4)")
