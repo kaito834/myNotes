@@ -26,6 +26,10 @@ class myKeePass:
         '''Get the password via KPScript 'GeEntryString' command
         The password is stored on *refTitle* entry on KDBX file
 
+        Return value: string
+        - Password if it's succeeded
+        - "" if it's failed
+
         Reference:
         - http://keepass.info/help/v2_dev/scr_sc_index.html#getentrystring
         '''
@@ -42,12 +46,13 @@ class myKeePass:
             # https://docs.python.org/3.4/library/subprocess.html#subprocess.check_output
             # ... If used it must be a byte sequence, or a string if universal_newlines=True. ...
             kpscript_result = subprocess.check_output(kpscript_args, universal_newlines=True)
+
+            # https://docs.python.org/3/library/stdtypes.html#str.splitlines
+            return kpscript_result.splitlines()[0]
         except subprocess.CalledProcessError as e:
             # https://docs.python.org/3.4/library/subprocess.html#subprocess.CalledProcessError
             print(type(e))
             # NOTE: Valid or invalid master key will be outputted if print(e.cmd) is commented out
             # print(e.cmd)
             print(e.output)
-
-        # https://docs.python.org/3/library/stdtypes.html#str.splitlines
-        return kpscript_result.splitlines()[0]
+            return ""
