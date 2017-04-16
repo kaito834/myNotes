@@ -38,7 +38,7 @@ $ curl -s https://ip-ranges.amazonaws.com/ip-ranges.json | jq-win64.exe .createD
 ```
 
 #### Reference
--  [https://orebibou.com/2016/03/curl%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%A7%E8%A6%9A%E3%81%88%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E4%BD%BF%E3%81%84%E6%96%B9xx%E5%80%8B/#5]
+- https://orebibou.com/2016/03/curl%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%A7%E8%A6%9A%E3%81%88%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E4%BD%BF%E3%81%84%E6%96%B9xx%E5%80%8B/#5 (in Japanese)
 
 ### Output HTTP response and request
 An option [-i/--include](http://curl.haxx.se/docs/manpage.html#-i) allows you to output all of HTTP response; Both headers and body of HTTP response.
