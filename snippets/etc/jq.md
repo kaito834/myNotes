@@ -9,7 +9,7 @@ You can filter all elements at an arrary from JSON object by [array iterator: \[
 By the way, there are 3 examples at [AWS IP Address Ranges web page](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html#jq-examples).
 - Example 1. Get the creation date
 - Example 2. Get the information for a specific region
-  * [Builtin function: select](https://stedolan.github.io/jq/manual/#select(boolean_expression)
+  * [Builtin function: select](https://stedolan.github.io/jq/manual/#select%28boolean_expression%29)
 - Example 3. Get all IP addresses
 
 ```
