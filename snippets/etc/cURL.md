@@ -25,6 +25,21 @@ Accept: */*
 
 ```
 
+Progress meter is outputted if the output of curl is piped. You can use [-s/--slient](https://curl.haxx.se/docs/manpage.html#-s) option if you would like not to output progress meter.
+```
+$ curl -S https://ip-ranges.amazonaws.com/ip-ranges.json | jq-win64.exe .createDate
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  113k  100  113k    0     0   125k      0 --:--:-- --:--:-- --:--:--  127k
+"2017-04-07-18-22-10"
+
+$ curl -s https://ip-ranges.amazonaws.com/ip-ranges.json | jq-win64.exe .createDate
+"2017-04-07-18-22-10"
+```
+
+#### Reference
+-  [https://orebibou.com/2016/03/curl%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%A7%E8%A6%9A%E3%81%88%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E4%BD%BF%E3%81%84%E6%96%B9xx%E5%80%8B/#5]
+
 ### Output HTTP response and request
 An option [-i/--include](http://curl.haxx.se/docs/manpage.html#-i) allows you to output all of HTTP response; Both headers and body of HTTP response.
 Or, an option [-I/--head](http://curl.haxx.se/docs/manpage.html#-I) allows you to output **only** headers of HTTP response.
