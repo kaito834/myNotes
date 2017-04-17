@@ -6,6 +6,7 @@ set KdbxFile=C:\Users\kaito\Documents\mydata\kdbx\myDatabase.kdbx
 
 REM http://keepass.info/help/v2_dev/scr_sc_index.html#masterkey
 REM http://keepass.info/help/v2_dev/scr_sc_index.html#getentrystring
+REM You need to save this batch file by Shift_JIS encoding if specify Japanese title at -ref-Title
 set Cmd_KPScript=%Exe_KPScript% -guikeyprompt -c:GetEntryString "%KdbxFile%" -Field:Password -ref-Title:"aws_iam-kaito834-program"
 
 for /f "usebackq delims=" %%a in (`%Cmd_KPScript%`) do (
