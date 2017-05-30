@@ -36,6 +36,7 @@ class myKeePass:
         kpscript_args = [
             self.__kpscript_path,
             '-c:GetEntryString',
+            '-FailIfNoEntry',
             self.__kdbx_path,
             "-pw:{0}".format(self.__masterKey),
             '-Field:Password',
