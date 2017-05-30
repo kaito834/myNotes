@@ -8,6 +8,7 @@ import urllib.request
 import urllib.error
 import getpass
 import os
+import ssl
 
 # If you access to url below via Proxy,
 # you can use environment variable 'http_proxy' without urllib.request.ProxyHandler.
@@ -34,7 +35,10 @@ else:
 passman = urllib.request.HTTPPasswordMgrWithDefaultRealm()
 passman.add_password(None, url, auth_user, auth_passwd)
 authhandler = urllib.request.HTTPBasicAuthHandler(passman)
-opener = urllib.request.build_opener(authhandler, proxyhandler)
+# https://www.python.org/dev/peps/pep-0476/
+context = ssl._create_unverified_context()
+httpshandler =  urllib.request.HTTPSHandler(context=context)
+opener = urllib.request.build_opener(authhandler, proxyhandler, httpshandler)
 urllib.request.install_opener(opener)
 
 # I can get http.client.HTTPResponse object in variable 'res'

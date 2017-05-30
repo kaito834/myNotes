@@ -6,6 +6,7 @@
 
 import urllib.request
 import subprocess
+import ssl
 
 def main():
     url = 'https://github.com/kaito834'
@@ -16,7 +17,10 @@ def main():
 
     #  Initialize urllib.request
     proxyhandler = urllib.request.ProxyHandler(proxys)
-    opener = urllib.request.build_opener(proxyhandler)
+    # https://www.python.org/dev/peps/pep-0476/
+    context = ssl._create_unverified_context()
+    httpshandler =  urllib.request.HTTPSHandler(context=context)
+    opener = urllib.request.build_opener(proxyhandler, httpshandler)
     urllib.request.install_opener(opener)
 
     try:

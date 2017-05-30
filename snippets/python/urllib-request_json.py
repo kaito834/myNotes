@@ -6,6 +6,7 @@
 
 import urllib.request
 import json
+import ssl
 
 # https://docs.python.org/3/library/urllib.request.html#examples
 # https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html
@@ -13,7 +14,9 @@ import json
 proxyhandler = urllib.request.ProxyHandler({'http': 'http://127.0.0.1:8080/', 'https': 'https://127.0.0.1:8080/'})
 opener = urllib.request.build_opener(proxyhandler)
 urllib.request.install_opener(opener)
-res = urllib.request.urlopen('https://ip-ranges.amazonaws.com/ip-ranges.json')
+# https://www.python.org/dev/peps/pep-0476/
+context = ssl._create_unverified_context()
+res = urllib.request.urlopen('https://ip-ranges.amazonaws.com/ip-ranges.json', context=context)
 # type(res_body) is class 'bytes'
 res_body = res.read()
 
