@@ -18,6 +18,10 @@ def main():
     #  Initialize urllib.request
     proxyhandler = urllib.request.ProxyHandler(proxys)
     # https://www.python.org/dev/peps/pep-0476/
+    # This script disables certificate verfication, but this is *NOT* recommended.
+    # If you use self-signed certificate, you should add your root certificate by SSLContext.load_cert_chain()
+    # https://docs.python.org/3/library/ssl.html#ssl.SSLContext.load_cert_chain
+    # https://docs.python.org/3/library/ssl.html#ssl-security
     context = ssl._create_unverified_context()
     httpshandler =  urllib.request.HTTPSHandler(context=context)
     opener = urllib.request.build_opener(proxyhandler, httpshandler)
