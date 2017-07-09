@@ -49,7 +49,15 @@ For this procedures, input/select the values on Key URI into the fields at Yubic
   * [Amazon.co.jp ヘルプ: 2段階認証の設定を変更する](https://www.amazon.co.jp/gp/help/customer/display.html/?ie=UTF8&nodeId=202073720) (in Japanese)
 - GitHub
   * [Configuring two-factor authentication via a TOTP mobile app, GitHub Help](https://help.github.com/articles/configuring-two-factor-authentication-via-a-totp-mobile-app/)
-
+- Dropbox
+  * [Enable two-step verification  – Dropbox](https://www.dropbox.com/help/security/enable-two-step-verification)
+- Facebook
+  * [What is two-factor authentication and how does it work? | Facebook Help Center](https://www.facebook.com/help/148233965247823)
+- Amazon Web Service(AWS)
+  * [Using Multi-Factor Authentication (MFA) in AWS - AWS Identity and Access Management](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa.html)
+- Tumblr
+  * [Two-factor authentication - Help Center](https://tumblr.zendesk.com/hc/en-us/articles/226270148-Two-factor-authentication)
+  
 # References
 - Yubico
   * [Downloads Archives](https://www.yubico.com/support/knowledge-base/categories/downloads/)
