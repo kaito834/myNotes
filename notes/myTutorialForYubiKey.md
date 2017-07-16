@@ -66,8 +66,7 @@ For this procedures, input/select the values on Key URI into the fields at Yubic
     + Helpful figure in Use OATH with the YubiKey section
   * [How to Use Your YubiKey With Authenticator Codes | Yubico](https://www.yubico.com/support/knowledge-base/categories/articles/how-to-use-your-yubikey-with-authenticator-codes/)
   * [Flexible Modern Authentication with the Multi-Protocol YubiKey, Yubico Blog](https://www.yubico.com/2017/07/flexible-modern-authentication-with-multiprotocol-yubikey/)
-    + One-Time Passwords(OTP), CCID(smart card) - PIV, OpenPGP and OATH - , and Universal 2nd Factor(U2F)
-
+    + One-Time Passwords(OTP), CCID(smart card) - PIV, OpenPGP and OATH, - and Universal 2nd Factor(U2F)
 - [YubiKey製品一覧, CloudGate](https://www.cloudgate.jp/yubikey.html) (in Japanese)
 - [秘密鍵、管理してますか? YubiKeyで鍵の一元管理とSSH接続、２段階認証の高速化を試す, Qiita](http://qiita.com/dseg/items/77d77467970b1b510285) (in Japanese)
 - [QR Code Editor (in Japanese)](http://www.psytec.co.jp/freesoft/01/)
