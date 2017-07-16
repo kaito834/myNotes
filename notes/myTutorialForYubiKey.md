@@ -57,12 +57,17 @@ For this procedures, input/select the values on Key URI into the fields at Yubic
   * [Using Multi-Factor Authentication (MFA) in AWS - AWS Identity and Access Management](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa.html)
 - Tumblr
   * [Two-factor authentication - Help Center](https://tumblr.zendesk.com/hc/en-us/articles/226270148-Two-factor-authentication)
-  
+
 # References
 - Yubico
   * [Downloads Archives](https://www.yubico.com/support/knowledge-base/categories/downloads/)
   * [Documentation Archives](https://www.yubico.com/support/knowledge-base/categories/guides/)
+  * [OATH, dev.yubico](https://developers.yubico.com/OATH/)
+    + Helpful figure in Use OATH with the YubiKey section
   * [How to Use Your YubiKey With Authenticator Codes | Yubico](https://www.yubico.com/support/knowledge-base/categories/articles/how-to-use-your-yubikey-with-authenticator-codes/)
+  * [Flexible Modern Authentication with the Multi-Protocol YubiKey, Yubico Blog](https://www.yubico.com/2017/07/flexible-modern-authentication-with-multiprotocol-yubikey/)
+    + One-Time Passwords(OTP), CCID(smart card) - PIV, OpenPGP and OATH - , and Universal 2nd Factor(U2F)
+
 - [YubiKey製品一覧, CloudGate](https://www.cloudgate.jp/yubikey.html) (in Japanese)
 - [秘密鍵、管理してますか? YubiKeyで鍵の一元管理とSSH接続、２段階認証の高速化を試す, Qiita](http://qiita.com/dseg/items/77d77467970b1b510285) (in Japanese)
 - [QR Code Editor (in Japanese)](http://www.psytec.co.jp/freesoft/01/)
