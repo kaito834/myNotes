@@ -28,3 +28,33 @@ I quoted helpful sentences or noted links for me from the book below:
 - 対応しているか否かをまずチェックする
 - ビルドツールの対応をチェックする
 - きほんは「ファイルの組み込み」と「ライブラリの追加」
+
+# Chapter 6 Java EE (JAX-RS/JSF/JPA)
+## 6.1 JAX-RSの基本
+6.1.2 JAX-RSとは？
+> JAX-RSは、RESTfulなサービスを構築するためのフレームワークです。その最大の特
+> 徴は、「RESTfulサービス構築のために、特別な設計を必要としない」という点にありま
+> す。JAX-RSでRESTfulサービスとして扱えるのは、ごく一般的なJavaのクラスです。普
+> 通のクラスとして作成した機能を、いくつかのアノテーションを付けるだけでそのまま
+> RESTfulサービスとして公開できるようにしてくれているのです。
+
+> ただし、注意して欲しいのは、「JAX-RSは、Java EEの仕様であり、ソフトウェアでは
+> ない」という点です。Java EEの機能には、基本的に「仕様」として用意されているだけで、
+> その具体的な実装はサードパーティに委ねられているものがあります。
+
+> ここで利用するJAX-RS実装は、「Jersey」(ジャージー)です。Jerseyは、Oracleによる
+> JAX-RS実装で、オープンソースです。
+
+6.1.8 MyResource.javaについて
+> このMyResourceクラスは、特別なクラスなどを継承していない、ごく普通のPOJOク
+> ラスです。このクラスに、JAX-RSのためのアノテーションを追加することで、RESTful
+> サービスとして公開されるようになります。
+
+＠Path("myresource"), 6.1.8 MyResource.javaについて
+> このWebアプリケーションは、サーバーにmy-jaxrs-webという名前で公開されていま
+> す。更に、web.xmlにより、/webapi/* というところにJerseyのサーブレットがマッピン
+> グされています。更に次のmyresourceというパスに、MyResourceクラスがマッピング
+> されます。したがって、
+> `http://ホスト/アプリケーション/webapi/myresource`
+> このようにアクセスすると、MyResourceクラスにある機能が呼び出される、というこ
+> とになるわけです。
