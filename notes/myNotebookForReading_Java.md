@@ -100,3 +100,39 @@ p.429 11.3.1 継承を利用したクラスの作られ方
 
 ### 11.4 正しい継承、間違った継承
 This section is helpful for me to understand the design of inheritance.
+
+# JavaによるRESTfulシステム構築
+https://www.oreilly.co.jp/books/9784873114675/ (in Japanese)
+
+## 4章 HTTPメソッドとURIマッチング
+### 4.2 @Path
+p.50 4.2.3 マトリックスパラメータ
+> マトリックスパラメータは、URI文字列のパス内に埋め込まれた名前/値のペアである。以下に例を示す。
+> `http://example.cars.com/mercedes/e55;color=black/2006`
+> マトリックスパラメータはURIセグメントの後に続き、その境界が「;」文字によって区切られる。
+
+> マトリックスパラメータはURIの特定のセグメントの属性を示し、識別目的の
+> ために使用されるという点で、クエリパラメータとは異なる。マトリックスパラメータを形容詞と考えても
+> よい。
+
+## 6章 JAX-RSコンテンツハンドラ
+### 6.2 JAXB
+p.78
+> JAXBは以前からあるJava仕様であり、JAX-RSで定義されているのではない。JAXBは、Javaクラスを
+> XMLおよびXMLスキーマにマッピングするアノテーションフレームワークである。
+
+p.82 6.2.2 JAXB JAX-RSハンドラ
+> JAXBアノテーションをJavaクラスに適用すると、クライアントとWebサービス間
+> のXMLドキュメントの交換は非常に容易になる。組み込みのJAXBハンドラは、applicatoin/xml、
+> text/xml、application/\*+xmlのメディアタイプに対してJAXBでアノテートされたクラスを処理する。
+
+pp.86-87 6.2.4 JSONとJSONスキーマ
+> JavaとJSONについてGoogleで検索してみると、JavaとJSON間のマーシャリングとアンマーシャリ
+> ングを支援するフレームワークが数多く存在することに気づく。その中で特筆すべきものがJacksonフ
+> レームワークだ。このフレームワークは、Java beanからJSONに、またJSONからJava beanに自動変
+> 換するJAX-RSコンテンツハンドラを備えている。また、JavaオブジェクトモデルからJSONスキーマド
+> キュメントの生成機能も備えている。
+
+> 実際にはこれらの作業はすべてJacksonフレームワークのJAX-RS統合が行うため、JAX-RSクラスに関
+> してあなたが行う作業は、JAX-RSメソッドを記述する際に出力と入力のフォーマットをapplication/JSON
+> として指定するだけだ。
