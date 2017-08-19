@@ -136,3 +136,14 @@ pp.86-87 6.2.4 JSONとJSONスキーマ
 > 実際にはこれらの作業はすべてJacksonフレームワークのJAX-RS統合が行うため、JAX-RSクラスに関
 > してあなたが行う作業は、JAX-RSメソッドを記述する際に出力と入力のフォーマットをapplication/JSON
 > として指定するだけだ。
+
+## 14章 JAX-RS実装
+### 14.1 Jersey
+p.197 14.1.3 WADL
+> WADL (Web Application Description Language)は、Webアプリケーションを記述するためのボキャ
+> ブラリを定義するXMLドキュメントフォーマットである。WADLはRESTful WebサービスのWSDL
+> を目指している。
+
+> 実行時、JerseyはJAX-RSアプリケーションのWADLドキュメントを自動的に生成する。このアプリ
+> ケーションWADLは /root/application.wadlから利用可能になる。rootはデプロイされるWebアプリ
+> ケーションのベースURIである。
