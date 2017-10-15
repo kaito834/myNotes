@@ -77,12 +77,12 @@ Usage: 7z <command> [<switches>...] <archive_name> [<file_names>...]
 ## Extract RPM package by 7-Zip
 7-Zip allows users to extract RPM package on Windows environment.
 2 steps to extract RPM package by `7z.exe` are as following:
-1. Extract RPM package into CIPO file
+1. Extract RPM package into CPIO file
 2. Extract the CPIO file
 
 For example, I extracted [golang-1.7.6-1.el6.i686.rpm](http://dl.fedoraproject.org/pub/epel/6Server/i386/golang-1.7.6-1.el6.i686.rpm) by `7z.exe`, and stored files and directories contained in file on local disk.
 
-### Step 1: Extract RPM package into CIPO file
+### Step 1: Extract RPM package into CPIO file
 ```
 C:\Users\kaito\Documents\tmp>dir /B
 golang-1.7.6-1.el6.i686.rpm
