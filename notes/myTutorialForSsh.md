@@ -112,13 +112,17 @@ $ ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key.pub
 $ ssh-keygen -l -E md5 -f ~/.ssh/id_rsa.pub
 ```
 
-# Use SSH key pair on Web services
+# Use SSH on Web services
 ## How do I know SSH host key on Web services
 - GitHub
   - "[_What are GitHub's SSH key fingerprints?_](https://help.github.com/articles/what-are-github-s-ssh-key-fingerprints/)" on GitHub Help shows me its SSH host key.
 - Amazon EC2
   - According to [Amazon EC2 document](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html), I can know SSH host key on each EC2 instances by AWS CLI or Amazon EC2 CLI.
   - Or, according to [WinSCP document](http://winscp.net/eng/docs/guide_amazon_ec2), I can know SSH host key on _Instances_ page of Amazon EC2 console.
+
+## Best Practices
+- [Security/Guidelines/OpenSSH on mozilla wiki](https://wiki.mozilla.org/Security/Guidelines/OpenSSH)
+  * Via [Securing SSH Services - Go Blue Team!!, SANS InfoSec Handlers Diary Blog](https://isc.sans.edu/diary/22992)
 
 # References
 - [SSHの秘密鍵について - 禿散らかしてごめんなさい](http://d.hatena.ne.jp/machua/20110809/1312899353) (in Japanese)
