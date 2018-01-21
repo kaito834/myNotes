@@ -154,3 +154,101 @@ This is my notes for [徹底例解ロイヤル英文法 改訂新版](https://ww
 #### 2 場所の副詞節を導く接続詞
 - where
   * ～するところ[に|へ|で]
+
+### 293 原因・理由の副詞節を導く接続詞
+#### 1 because, since, as の用法
+- because
+  * 原因・理由を表す最もよく用いられる接続詞
+  * since, as などに比べて、よりはっきりとした、直接的な原因・理由を表す
+- since
+  * ～である以上
+  * 話し手、聞き手の両方がすでに知っている理由を述べるときに用いる
+- as
+  * ～だから
+  * 間接的で補足的な原因・理由を表す
+    + as は時や様態を表すことが多くて紛らわしいので、理由を示すのに <<米>>では避けられる傾向がある
+    + 代わりに because, since が用いられることが多い
+
+#### 2 that, now that, seeing that
+- that
+  * (It is)not that: 「・・・というわけではない」という意味で慣用的に用いる
+  * be glad/sorry/supprised that: 感情の原因を表す
+  * 驚きや意外の気持ちを表して、「～するとは」の意味で用いる
+- now that
+  * 今はもう・・・だから、・・・である以上は
+- seeing that
+  * ～だから
+
+### 294 目的・結果の副詞節を導く接続詞
+#### 1 目的を表す副詞節を導く接続詞
+- so that, in order that, that
+  * ～するために
+  * so that: くだけた文体で最もよく用いられる
+    + so that の場合、助動詞は can がふつう。
+    + くだけた言い方、特に <<米>>では that を省略して、so だけを用いる
+  * in order that: やや改まった文語的表現
+  * that: 形式ばった文語的表現に用いる
+- lest, for feat (that)
+  * lest
+    +  ～しないように
+    + 文語調
+    + lest の導く節では仮定法現在を用いることが多いが、改まった言い方では should を用いる
+    + くだけた表現では、so that ... not, in case ... などの別の表現を用いる
+  * for fear (that)
+    + ～しないように
+    + 改まった言い方
+  * in case
+    + ～の場合に備えて
+
+#### 2 結果を表す副詞節を導く接続詞
+- so ～ that ..., such ～ that ...
+  * so ～ that ...
+    + 非常に～なので...
+  * such ～ that ...
+    + 非常に～なので...
+    + ～の部分に(不定冠詞+)形容詞+名詞を入れる
+    + such that ...: such=so great, 非常なものなので...
+- ..., so that
+  * 前の文を受けて、「それで、その結果」という意味を表す
+  * so that の前に原則としてコンマを打つ
+
+### 295 条件・譲歩の副詞節を導く接続詞
+#### 1 条件の副詞節を導く接続詞
+- if, unless
+  * if
+    + もしも～ならば
+  * unless
+    + もしも～しなければ、～しない限り
+    + except if: ～という条件を除いて、～でない限りの意味
+      - unless の導く節の中では any ではなく、some を用いるのがふつう
+      - unless + 否定文の場合はふつう if not で書き換えられない
+- in case
+  * もしも～の場合には
+- suppose, supposing; provided (that), providing (that); granted (that), granting (that)
+  * ～としたら
+  * if の代用表現
+- as long as, so long as
+  * ～である限り
+
+#### 2 譲歩の副詞節を導く接続詞
+- although, though
+  * ～だけれども
+  * though と although
+    + くだけた話し言葉では though が用いられる
+    + 堅い言い方では although が好まれる傾向がある
+    + ほとんどの場合交換可能
+- as
+  * ～だけれども
+  * 文語的で堅い表現
+- if, even if, even though
+  * たとえ～であっても
+  * even if と even though
+    + even if: 条件の if を強めたもの
+    + even though: 譲歩の though 強めたもの
+- while, when, whereas
+  * ～なのに
+- whether ～ or ...
+  * ～であるにせよ、...であるにせよ
+- no matter (what) ～
+  * たとえ～であったとしても
+  * no matter + 疑問詞の形で譲歩を表す
