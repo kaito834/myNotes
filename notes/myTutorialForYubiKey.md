@@ -1,5 +1,20 @@
 This is my tutorial for [Yubikey](https://www.yubico.com/products/yubikey-hardware/), multi protocol USB security keys developed by Yubico.
 
+# What is YubiKey
+Yubikey is a security key device, which is developed by [Yubico](https://www.yubico.com/products/yubikey-hardware/).
+Yubikey consists of a few product series, and support [security functions below](https://www.yubico.com/products/yubikey-hardware/compare-yubikeys/).
+Yubikey users can use Yubikey as 2 factor authentication device, secure key storage and other security purpose.
+Also, [a lot of Web service](https://www.yubico.com/solutions/) have already integrated with Yubikey.
+
+- Secure Static Passwords
+- Yubico OTP
+- OATH – HOTP (Event)
+- OATH – TOTP (Time)
+- Smart Card (PIV-Compatible)
+- OpenPGP
+- FIDO U2F (Universal Second Factor)
+- Secure Element
+
 # Use Yubikey at 2 Factor Authentication(2FA)
 ## My Environments
 - [Yubikey 4](https://www.yubico.com/products/yubikey-hardware/yubikey4/)
@@ -69,4 +84,5 @@ For this procedures, input/select the values on Key URI into the fields at Yubic
     + One-Time Passwords(OTP), CCID(smart card) - PIV, OpenPGP and OATH, - and Universal 2nd Factor(U2F)
 - [YubiKey製品一覧, CloudGate](https://www.cloudgate.jp/yubikey.html) (in Japanese)
 - [秘密鍵、管理してますか? YubiKeyで鍵の一元管理とSSH接続、２段階認証の高速化を試す, Qiita](http://qiita.com/dseg/items/77d77467970b1b510285) (in Japanese)
+- [yubikeyでセキュリティ筋力を鍛える](http://joemphilips.com/post/yubikey_setup/)
 - [QR Code Editor (in Japanese)](http://www.psytec.co.jp/freesoft/01/)
