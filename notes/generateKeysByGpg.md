@@ -147,3 +147,15 @@ gpg: 2048-ビットELG鍵, ID C76A2B46, 日付2015-03-20に暗号化されまし
 gpg: 復号に失敗しました: No secret key
 ```
 The file, generateKeysByGpg.md.gpg, was encrypted by [public key for IPA/ISEC](https://www.ipa.go.jp/security/pgp/vuln_fy27.asc).
+
+# Appendix B. Links Related to GPG
+- http://www.ws.afnog.org/afnog2014/cte/tuesday/pgp-handson.pdf
+  * PGP key operation Hands on Exercise by JPCERT/CC
+- https://www.gnupg.org/gph/en/manual/c235.html
+  * Chapter 3. Key Management, The GNU Privacy Handbook
+  * Section: Adding and deleting key components is interesting for me
+    + adduid
+    + addkey
+- http://joemphilips.com/post/gpg_memo/
+  * Section: ssh鍵としての使用 is interesting for me
+  * Also, this page links to helpful documents: e.g. OpenPGP best practices guide
