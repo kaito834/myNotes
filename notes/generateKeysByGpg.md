@@ -1,16 +1,16 @@
 # Generate openPGP public/private keys by GPG
 
-### An Environment for this procedure
+## An Environment for this procedure
 - [GnuPG(GPG)](https://www.gnupg.org/) 2.0.x on Windows 8.1
   - We should latest gpg if no specific reasons.
   - I have been using one [Gpg4win](http://www.gpg4win.org/) contains
 
-### Procedure to generate keys
+## Procedure to generate keys
 1. Define parameters
 2. Generate public/private keys
 3. Generate revocation certificate
 
-#### 1. Define parameters
+### 1. Define parameters
 Before generating public/private keys, I will define some parameters. The parameters are following:
 - Cryptographic algorithems
   - Usually, asymmetric key algorithms; RSA, DSA or others
@@ -20,7 +20,7 @@ Before generating public/private keys, I will define some parameters. The parame
 
 Firstly, I will select asymmetric algorithm that have not been compromised yet. We can know the alogrithms by some guidelines; for examples, [NIST SP 800-57](http://csrc.nist.gov/publications/nistpubs/800-57/sp800-57_part1_rev3_general.pdf) or [CRYPTREC暗号リスト](http://www.cryptrec.go.jp/images/cryptrec_ciphers_list_2013.pdf) (in Japanese). Secondly, I will define expiration date of the key. I usually define a year later as expiration date. Finally, I will define the size of key. I should define the size of which attackers would not be able to compromise a key. A web site provided by BlueKrypt, "[Cryptographic Key Length Recommendation](http://www.keylength.com/en/compare/)," is useful to define the size.
 
-#### 2. Generate public/private keys
+### 2. Generate public/private keys
 I generated public/private keys by gpg command. Then, cryptographic algorithem was **_RSA_**, size of the was **_2048 bits_** and expiration date was **_one year later_**; RSA 2048 bits has been default on gpg 2.0.27. Sorry, the result of gpg command has been in Japanase in this text:(
 
 ```
@@ -83,7 +83,7 @@ sub   2048R/DCBADCBA 2015-04-12 [有効期限: 2016-04-11]
 (comment: I replaced original key-id and fingerprint)
 ```
 
-#### 3. Generate revocation certificate
+### 3. Generate revocation certificate
 After generating public/private keys, I generated revocation certificate for the keys too. I will use this certificate to revoke the keys if the private key is stolen or I lose the privete key or I forget passphrase; some documents have recommeneded to generate revocation certificate (See Reference). Sorry, the result of gpg command has been in Japanase in this text:(
 
 ```
@@ -122,13 +122,13 @@ ASCII外装出力を強制します。
 場所にデータをおくことがあります!
 ```
 
-### References
+## References
 - [Key size, Wikipedia](http://en.wikipedia.org/wiki/Key_size)
 - [PGP Key Management Guide for NetBSD developers](http://www.netbsd.org/developers/pgp.html#manage-recommendations)
 - [Creating GPG Keys, Fedora Project](https://fedoraproject.org/wiki/Creating_GPG_Keys#GPG_Key_Revocation)
 
-### Appendix A. Tips for GnuPG
-#### Confirm which public keys are used for encryption
+# Appendix A. Tips for GnuPG
+## Confirm which public keys are used for encryption
 You can use '[--list-packets](https://www.gnupg.org/documentation/manuals/gnupg/Operational-GPG-Commands.html)' option if you would like to confirm which public keys are used for encryption.
 This option allows you to do only decryption process, then you can see key IDs for encryption or signature.
 According to [the post](http://superuser.com/questions/696941/human-readable-dump-of-gpg-public-key) on superuser, you can use [pgpdump](https://github.com/kazu-yamamoto/pgpdump) to get similar result.
