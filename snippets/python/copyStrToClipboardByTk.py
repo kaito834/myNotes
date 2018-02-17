@@ -4,6 +4,9 @@
 # Python 3.4.3 (v3.4.3:9b73f1c3e601, Feb 24 2015, 22:43:06) [MSC v.1600 32 bit (Intel)] on win32
 
 # This was based on https://gist.github.com/danielrasmusonsnippet/89fd62037febf465b52b
+#
+# Found useful python module, pyperclip: https://github.com/asweigart/pyperclip
+# According to the github repository, "Python module for cross-platform clipboard functions."
 def copyStrToClipboard():
 #def main():
     from tkinter import Tk
