@@ -19,6 +19,11 @@ This documents are noting how to detect secrets like API key on source code repo
 - Files which may include secrets in usual
   * You can find signatures at [core/signatures.go](https://github.com/michenriksen/gitrob/blob/master/core/signatures.go#L163)
 
+## git-secrets
+### What type of secrets git-secrets can detect
+- AWS Access key/secrets
+  * Refer to https://github.com/awslabs/git-secrets/blob/master/git-secrets#L233-L242
+
 ## truffleHog
 ### Environments
 - Windows 10
