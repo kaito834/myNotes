@@ -140,6 +140,10 @@ git.exc.GitCommandNotFound: Cmd('git') not found due to: FileNotFoundError('[Win
   cmdline: git clone -v https://github.com/kaito834/myNotes.git C:\Users\kaito\AppData\Local\Temp\tmpkcymh80n
 ```
 
+### What type of secrets truffleHog can detect
+- BASE64/Hex strings which entropies are high in commit logs
+- Strings which are matched regular expressions defined at [regexes.json on truffleHogRegexes](https://github.com/dxa4481/truffleHogRegexes/blob/master/truffleHogRegexes/regexes.json)
+
 ### How truffleHog detects secrets
 Refer to https://github.com/dxa4481/truffleHog#how-it-works
 
