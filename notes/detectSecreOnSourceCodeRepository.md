@@ -13,6 +13,12 @@ This documents are noting how to detect secrets like API key on source code repo
   * Via https://twitter.com/kaito834/status/1016854601188818944
 
 # Notes for Usage
+## gitrob
+### What type of secrets gitrob can detect
+- Files which are secrets by themselves
+- Files which may include secrets in usual
+  * You can find signatures at [core/signatures.go](https://github.com/michenriksen/gitrob/blob/master/core/signatures.go#L163)
+
 ## truffleHog
 ### Environments
 - Windows 10
