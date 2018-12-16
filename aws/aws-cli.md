@@ -58,3 +58,32 @@ $> aws --version
 拡張子 .py のファイルの関連付けが見つかりません
 aws-cli/1.16.73 Python/3.6.3 Windows/10 botocore/1.12.63
 ```
+
+## Upgrade
+```
+$> pip install --user --upgrade awscli
+Collecting awscli
+  Downloading https://files.pythonhosted.org/packages/39/b2/787e87930c598376ccdc53372c849dbdf27a71b9647ce1b8f01235388a88/awscli-1.16.76-py2.py3-none-any.whl (1.4MB)
+    100% |████████████████████████████████| 1.4MB 2.0MB/s
+Requirement already satisfied, skipping upgrade: docutils>=0.10 in c:\users\kaito\appdata\roaming\python\python36\site-packages (from awscli) (0.14)
+Requirement already satisfied, skipping upgrade: colorama<=0.3.9,>=0.2.5 in c:\users\kaito\appdata\roaming\python\python36\site-packages (from awscli) (0.3.9)
+Requirement already satisfied, skipping upgrade: s3transfer<0.2.0,>=0.1.12 in c:\users\kaito\appdata\roaming\python\python36\site-packages (from awscli) (0.1.13)
+Collecting botocore==1.12.66 (from awscli)
+  Downloading https://files.pythonhosted.org/packages/51/da/3ed787b6ca3d33f626c1ba4e014449825db0d557981c4bef71f886fb1424/botocore-1.12.66-py2.py3-none-any.whl (5.1MB)
+    100% |████████████████████████████████| 5.1MB 1.4MB/s
+Requirement already satisfied, skipping upgrade: PyYAML<=3.13,>=3.10 in c:\users\kaito\appdata\roaming\python\python36\site-packages (from awscli) (3.13)
+Requirement already satisfied, skipping upgrade: rsa<=3.5.0,>=3.1.2 in c:\users\kaito\appdata\roaming\python\python36\site-packages (from awscli) (3.4.2)
+Requirement already satisfied, skipping upgrade: urllib3<1.25,>=1.20; python_version >= "3.4" in c:\users\kaito\appdata\roaming\python\python36\site-packages (from botocore==1.12.66->awscli) (1.24.1)
+Requirement already satisfied, skipping upgrade: jmespath<1.0.0,>=0.7.1 in c:\users\kaito\appdata\roaming\python\python36\site-packages (from botocore==1.12.66->awscli) (0.9.3)
+Requirement already satisfied, skipping upgrade: python-dateutil<3.0.0,>=2.1; python_version >= "2.7" in c:\users\kaito\appdata\roaming\python\python36\site-packages (from botocore==1.12.66->awscli) (2.7.5)
+Requirement already satisfied, skipping upgrade: pyasn1>=0.1.3 in c:\users\kaito\appdata\local\programs\python\python36-32\lib\site-packages (from rsa<=3.5.0,>=3.1.2->awscli) (0.3.7)
+Requirement already satisfied, skipping upgrade: six>=1.5 in c:\users\kaito\appdata\local\programs\python\python36-32\lib\site-packages (from python-dateutil<3.0.0,>=2.1; python_version >= "2.7"->botocore==1.12.66->awscli) (1.10.0)
+Installing collected packages: botocore, awscli
+  Found existing installation: botocore 1.12.63
+    Uninstalling botocore-1.12.63:
+      Successfully uninstalled botocore-1.12.63
+  Found existing installation: awscli 1.16.73
+    Uninstalling awscli-1.16.73:
+      Successfully uninstalled awscli-1.16.73
+Successfully installed awscli-1.16.76 botocore-1.12.66
+```
