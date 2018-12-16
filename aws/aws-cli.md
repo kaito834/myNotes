@@ -49,15 +49,16 @@ Successfully installed PyYAML-3.13 awscli-1.16.73 botocore-1.12.63 colorama-0.3.
 
 Close command prompt. After that, you add `%APPDATA%\Python\Python36\Scripts` to
 PATH environment variable. Then, launch command prompt again.
-
-NOTE:
-Command path on [AWS Command Line Interface User Guide](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html#awscli-install-windows-path)
-isn't correct as of Dec. 13, 2018. Please check [issue #3181 on aws-cli GitHub repogitory](https://github.com/aws/aws-cli/issues/3181).
 ```
 $> aws --version
 拡張子 .py のファイルの関連付けが見つかりません
 aws-cli/1.16.73 Python/3.6.3 Windows/10 botocore/1.12.63
 ```
+
+NOTES:
+* Command path on [AWS Command Line Interface User Guide](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html#awscli-install-windows-path)
+isn't correct as of Dec. 13, 2018. Please check [issue #3181 on aws-cli GitHub repogitory](https://github.com/aws/aws-cli/issues/3181).
+* Message:"拡張子 .py のファイルの関連付けが見つかりません" was reported at [issue #3518 on aws-cli GitHub repogitory](https://github.com/aws/aws-cli/issues/3518). The issue associated with the message is resolved if you apply [commit on PR #2005](https://github.com/aws/aws-cli/pull/2005) to `bin/aws.cmd`.
 
 ## Upgrade
 ```
