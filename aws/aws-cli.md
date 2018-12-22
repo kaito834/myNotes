@@ -60,6 +60,33 @@ NOTES:
 isn't correct as of Dec. 13, 2018. Please check [issue #3181 on aws-cli GitHub repogitory](https://github.com/aws/aws-cli/issues/3181).
 * Message:"拡張子 .py のファイルの関連付けが見つかりません" was reported at [issue #3518 on aws-cli GitHub repogitory](https://github.com/aws/aws-cli/issues/3518). The issue associated with the message is resolved if you apply [commit on PR #2005](https://github.com/aws/aws-cli/pull/2005) to `bin/aws.cmd`.
 
+## Configure
+Set aws access key/secret, default region and default output format by `aws configure`.
+Listed AWS Access Key ID/Secret Access Key are example on [AWS Command Line Interface User Guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html#cli-quick-configuration).
+After `aws configure` was done, the inputted data is stored in `%USERPROFILE%\.aws\config` or `%USERPROFILE%\.aws\credentials` as default profile.
+Execute `aws configure` with [--profile <profilename>](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-options.html) if
+you'd like to create [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html).
+```
+$> aws configure
+AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
+AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+Default region name [None]: us-west-2
+Default output format [None]:
+```
+
+`aws configure list` helps you to know where access key/secret are loaded: e.g. credentials file, environment variable.
+* Refer to https://dev.classmethod.jp/cloud/aws/how-to-configure-aws-cli/ (in Japanese)
+
+```
+$> aws configure list
+      Name                    Value             Type    Location
+      ----                    -----             ----    --------
+   profile                <not set>             None    None
+access_key     ****************MPLE shared-credentials-file
+secret_key     ****************EKEY shared-credentials-file
+    region                us-west-2      config-file    ~/.aws/config
+```
+
 ## Upgrade
 ```
 $> pip install --user --upgrade awscli
