@@ -73,21 +73,6 @@ $ curl -s https://ip-ranges.amazonaws.com/ip-ranges.json | ./jq.exe '[.createDat
 ## Filter all elements at an array from JSON object
 You can filter all elements at an arrary from JSON object by [array iterator: \[\]](https://stedolan.github.io/jq/manual/#Array/ObjectValueIterator:.[]). Example result is as below: jq with [AWS IP Address Ranges(ip-ranges.json)](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html). The example means to filter only all elements of *prefixes* array by *.prefixes[]*.
 
-By the way, there are 6 examples at [AWS IP Address Ranges web page](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html#jq-examples) (as of Dec. 2018).
-- Example 1. Get the creation date
-  * `$ jq .createDate < ip-ranges.json`
-- Example 2. Get the information for a specific region
-  * `$ jq '.prefixes[] | select(.region=="us-east-1")' < ip-ranges.json`
-  * [Builtin function: select](https://stedolan.github.io/jq/manual/#select%28boolean_expression%29)
-- Example 3. Get all IP addresses
-  * `$ jq -r '.prefixes | .[].ip_prefix' < ip-ranges.json`
-- Example 4. Get all IPv6 addresses
-  * `$ jq -r '.ipv6_prefixes | .[].ipv6_prefix' < ip-ranges.json`
-- Example 5. Get all IPv4 addresses for a specific service
-  * `$ jq -r '.prefixes[] | select(.service=="CODEBUILD") | .ip_prefix' < ip-ranges.json`
-- Example 6. Get all IPv4 addresses for a specific service in a specific region
-  * `$ jq -r '.prefixes[] | select(.region=="us-east-1") | select(.service=="CODEBUILD") | .ip_prefix' < ip-ranges.json`
-
 ```
 $ jq-win64.exe --version
 jq-1.5
@@ -217,3 +202,19 @@ Error: writing output failed: Invalid argument
 
 ### Reference
 - [jqを使ってJSONをCSVに変換するいくつかの例。 - Jupitris on Laboratory](http://jupitrisonlabs.hatenadiary.jp/entry/20151127/1448606090) (in Japanese)
+
+# Related Links
+## [AWS IP Address Ranges web page](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html#jq-examples)
+- Example 1. Get the creation date
+  * `$ jq .createDate < ip-ranges.json`
+- Example 2. Get the information for a specific region
+  * `$ jq '.prefixes[] | select(.region=="us-east-1")' < ip-ranges.json`
+  * [Builtin function: select](https://stedolan.github.io/jq/manual/#select%28boolean_expression%29)
+- Example 3. Get all IP addresses
+  * `$ jq -r '.prefixes | .[].ip_prefix' < ip-ranges.json`
+- Example 4. Get all IPv6 addresses
+  * `$ jq -r '.ipv6_prefixes | .[].ipv6_prefix' < ip-ranges.json`
+- Example 5. Get all IPv4 addresses for a specific service
+  * `$ jq -r '.prefixes[] | select(.service=="CODEBUILD") | .ip_prefix' < ip-ranges.json`
+- Example 6. Get all IPv4 addresses for a specific service in a specific region
+  * `$ jq -r '.prefixes[] | select(.region=="us-east-1") | select(.service=="CODEBUILD") | .ip_prefix' < ip-ranges.json`
