@@ -4,6 +4,72 @@
 - MinGW including [Git for Windows](https://git-for-windows.github.io/)
 
 # My Usage of *jq*
+## Filter specific element
+You can filter specific element by `.foo`. `.` means root of inputted json object, and `foo` means object key name in the root object. The value of `foo` key in the root object is outputted if you filter by `.foo`.
+Example result is as below: *jq* with [AWS IP Address Ranges(ip-ranges.json)](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html). The example means to filter value of `createDate` key in the root object.
+
+```
+$ curl -s https://ip-ranges.amazonaws.com/ip-ranges.json | head
+{
+  "syncToken": "1546032855",
+  "createDate": "2018-12-28-21-34-15",
+  "prefixes": [
+    {
+      "ip_prefix": "18.208.0.0/13",
+      "region": "us-east-1",
+      "service": "AMAZON"
+    },
+    {
+
+$ curl -s https://ip-ranges.amazonaws.com/ip-ranges.json | ./jq.exe '.createDate'
+"2018-12-28-21-34-15"
+```
+
+*jq* allows users to repeat `.foo` like `.foo.bar`. According to [jq manual](https://stedolan.github.io/jq/manual/#Basicfilters), *A filter of the form .foo.bar is equivalent to .foo|.bar*. You can filter the values in nested object if you filter by repeating `.foo`. For example, *jq* with `.foo.bar` filters the value of `bar` key in an object which name is `foo` in the root object.
+Example result is as below: jq with [AWS IP Address Ranges(ip-ranges.json)](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html). The example means to filter value of `ip_prefix` key in first object on `prefixes` array in the root object. Please refer to [Array Index on jp manual](https://stedolan.github.io/jq/manual/#Basicfilters).
+
+```
+$ curl -s https://ip-ranges.amazonaws.com/ip-ranges.json | head
+{
+  "syncToken": "1546032855",
+  "createDate": "2018-12-28-21-34-15",
+  "prefixes": [
+    {
+      "ip_prefix": "18.208.0.0/13",
+      "region": "us-east-1",
+      "service": "AMAZON"
+    },
+    {
+
+$ curl -s https://ip-ranges.amazonaws.com/ip-ranges.json | ./jq.exe '.prefixes[0].ip_prefix'
+"18.208.0.0/13"
+```
+
+## Output filter results as object or Array
+When you run *jq* with combined filter with comma(`,`), *jq* combines each filter results and outputs them simply. `{}` allows you to output combined results as object. Also, `[]` allows you to output them as array. Example results are as below: jq with [AWS IP Address Ranges(ip-ranges.json)](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html).
+* Refer to [Object/Array construction in jq manual](https://stedolan.github.io/jq/manual/#TypesandValues)
+
+```
+$ curl -s https://ip-ranges.amazonaws.com/ip-ranges.json | ./jq.exe '.createDate, .prefixes[0].ip_prefix, .prefixes[0].region'
+"2018-12-28-21-34-15"
+"18.208.0.0/13"
+"us-east-1"
+
+$ curl -s https://ip-ranges.amazonaws.com/ip-ranges.json | ./jq.exe '{"a":.createDate, "b":.prefixes[0].ip_prefix, "c":.prefixes[0].region}'
+{
+  "a": "2018-12-28-21-34-15",
+  "b": "18.208.0.0/13",
+  "c": "us-east-1"
+}
+
+$ curl -s https://ip-ranges.amazonaws.com/ip-ranges.json | ./jq.exe '[.createDate, .prefixes[0].ip_prefix, .prefixes[0].region]'
+[
+  "2018-12-28-21-34-15",
+  "18.208.0.0/13",
+  "us-east-1"
+]
+```
+
 ## Filter all elements at an array from JSON object
 You can filter all elements at an arrary from JSON object by [array iterator: \[\]](https://stedolan.github.io/jq/manual/#Array/ObjectValueIterator:.[]). Example result is as below: jq with [AWS IP Address Ranges(ip-ranges.json)](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html). The example means to filter only all elements of *prefixes* array by *.prefixes[]*.
 
