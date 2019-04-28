@@ -112,6 +112,14 @@ $ ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key.pub
 $ ssh-keygen -l -E md5 -f ~/.ssh/id_rsa.pub
 ```
 
+### Get SSH public key from SSH private key
+`-y` option for [ssh-keygen](http://man.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/ssh-keygen.1) command allows you to get SSH public key from SSH private key. According to [man manual on OpenBSD](http://man.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/ssh-keygen.1), the option of ssh-keygen excepts to input OpenSSH format key file as SSH private key.
+```
+$ ssh-keygen -y -f <SSH private key>
+Enter passphrase: <input passphrase for the key>
+ssh-rsa AAAAB3Nza...
+```
+
 # Use SSH on Web services
 ## How do I know SSH host key on Web services
 - GitHub
