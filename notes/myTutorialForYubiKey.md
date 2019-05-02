@@ -94,25 +94,25 @@ Also, this procedures are based on [dev.yubico: Using PIV for SSH through PKCS11
 
 1. Download the latest Yubico PIV Tool and extract it
 2. Insert YubiKey into USB slot
-  1. Change [PIN/PUK, Management Key(MGM)](https://developers.yubico.com/PIV/Introduction/Admin_access.html) if you don't change default value of PIN/PUK, MGM  
+  - Change [PIN/PUK, Management Key(MGM)](https://developers.yubico.com/PIV/Introduction/Admin_access.html) if you don't change default value of PIN/PUK, MGM  
 3. Generate RSA key pair by `openssl` command (Refer to [dev.yubico:Generating keys using OpenSSL](https://developers.yubico.com/PIV/Guides/Generating_keys_using_OpenSSL.html))
-  1. NOTE: My YubiKey 4 is vulnerable to [YSA-2017-01/CVE-2017-15361](https://www.yubico.com/support/security-advisories/ysa-2017-01/), so RSA key pair is generated at out of YubiKey
+  - NOTE: My YubiKey 4 is vulnerable to [YSA-2017-01/CVE-2017-15361](https://www.yubico.com/support/security-advisories/ysa-2017-01/), so RSA key pair is generated at out of YubiKey
 4. Import RSA private key into YubiKey slot 9a, and then delete the private key from your disk
 5. Generate self-signed certificate
 6. Import the self-signed certificate into YubiKey
 7. Install OpenSC and confirm file path of `opensc-pkcs11.dll`
-  1. Default install path: `C:\Program Files\OpenSC Project\OpenSC\pkcs11\opensc-pkcs11.dll`
+  - Default install path: `C:\Program Files\OpenSC Project\OpenSC\pkcs11\opensc-pkcs11.dll`
 8. Download putty-cac and run the putty-cac
 9. Configure setting below on putty-cac window
-  1. Connection > SSH > Certificate: Click [Set PKCS Cert...] button and select `opensc-pkcs11.dll` at step 7
-  2. Select certificate for SSH authentication based on CN value defined at step 5.
-  3. Click [Copy to Clipboard] button and add copied SSH public key into your GitHub account (Refer to [GitHub document](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account))
-  4. Confirm that checkbox:"Attempt certificate authentication" is enabled
+  - Connection > SSH > Certificate: Click [Set PKCS Cert...] button and select `opensc-pkcs11.dll` at step 7
+  - Select certificate for SSH authentication based on CN value defined at step 5.
+  - Click [Copy to Clipboard] button and add copied SSH public key into your GitHub account (Refer to [GitHub document](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account))
+  - Confirm that checkbox:"Attempt certificate authentication" is enabled
 10. Input `github.com` at Host name field and click [Open] button
 11. Start SSH session, and then input `git` as log in user
 12. Open putty authentication dialog and input your PIN code
 13. Close SSH session silently if you succeeded to log in
-  1. NOTE: GitHub does not provide shell access (Refer to [GitHub document](https://help.github.com/en/articles/testing-your-ssh-connection))
+  - NOTE: GitHub does not provide shell access (Refer to [GitHub document](https://help.github.com/en/articles/testing-your-ssh-connection))
 14. Congratulation!
 
 ```
