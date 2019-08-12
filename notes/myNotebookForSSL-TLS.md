@@ -164,8 +164,9 @@ Congratulations! Done all steps:)
 - [opensslでRSA暗号と遊ぶ](http://d.hatena.ne.jp/ozuma/20130510/1368114329) (in Japanese)
 - [オレオレ証明書をopensslで作る（詳細版）](http://d.hatena.ne.jp/ozuma/20130511/1368284304) (in Japanese)
 
-
 ## SSL/TLS Best Practice
+- [プロフェッショナル SSL/TLS](https://www.lambdanote.com/products/tls) (in Japanese)
+  - Japanese Translation of "Bulletproof SSL and TLS", Ivan Ristić
 - [Transport Layer Protection Cheat Sheet, OWASP](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
 - [SSL/TLS Deployment Best Practices(PDF), Qualys SSL Labs](https://www.ssllabs.com/downloads/SSL_TLS_Deployment_Best_Practices.pdf)
   - via https://www.ssllabs.com/projects/best-practices/index.html
