@@ -120,6 +120,26 @@ Enter passphrase: <input passphrase for the key>
 ssh-rsa AAAAB3Nza...
 ```
 
+### Set/Change passphrase to SSH private key
+`-p` option for [ssh-keygen](http://man.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/ssh-keygen.1) command allows you to set/change passphrase to SSH private key. According to [manual of ssh-keygen](http://man.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/ssh-keygen.1?query=ssh-keygen#FILES), SSH private key is encrypted by AES 128bit.
+
+If SSH private key with `-f` option has no passphrase, the result of ssh-keygen with `-p` would be as below:
+```
+$ ssh-keygen -p -f development-ec2-keypair.pem
+Enter new passphrase (empty for no passphrase): <type passphrase>
+Enter same passphrase again: <type passphrase again>
+Your identification has been saved with the new passphrase.
+```
+
+On the other hand, if SSH private key with `-f` option has passphrase, you need to type current passphrase firstly:
+```
+$ ssh-keygen -p -f development-ec2-keypair.pem
+Enter old passphrase: <type current passphrase>
+Enter new passphrase (empty for no passphrase): <type new passphrase>
+Enter same passphrase again: <type new passphrase again>
+Your identification has been saved with the new passphrase.
+```
+
 # Use SSH on Web services
 ## How do I know SSH host key on Web services
 - GitHub
