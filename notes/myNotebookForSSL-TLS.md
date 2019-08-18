@@ -175,6 +175,7 @@ Congratulations! Done all steps:)
   * [OpenSSL CONF library configuration files](https://www.openssl.org/docs/manmaster/man5/config.html)
   * [CONFIGURATION FILE OPTIONS, ca, OpenSSL manual](https://www.openssl.org/docs/manmaster/man1/ca.html#CONFIGURATION-FILE-OPTIONS)
   * [CONFIGURATION FILE FORMAT, req, OpenSSL manual](https://www.openssl.org/docs/manmaster/man1/req.html#CONFIGURATION-FILE-FORMAT)
+- [Gist: shimarin/openssl.conf](https://gist.github.com/shimarin/47928)
 
 ## SSL/TLS Best Practice
 - [プロフェッショナル SSL/TLS](https://www.lambdanote.com/products/tls) (in Japanese)
