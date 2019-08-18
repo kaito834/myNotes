@@ -164,6 +164,18 @@ Congratulations! Done all steps:)
 - [opensslでRSA暗号と遊ぶ](http://d.hatena.ne.jp/ozuma/20130510/1368114329) (in Japanese)
 - [オレオレ証明書をopensslで作る（詳細版）](http://d.hatena.ne.jp/ozuma/20130511/1368284304) (in Japanese)
 
+## Private Certificate Authority(CA)
+
+### References
+- "11.4 プライベートCAを作る", 第11章 OpenSSL, [プロフェッショナルSSL/TLS](https://www.lambdanote.com/products/tls)
+  * Japanese Translation of "Bulletproof SSL and TLS", Ivan Ristić
+  * [Gist: Notes for section:"11.4 プライベートCAを作る", "プロフェッショナルSSL/TLS"](https://gist.github.com/kaito834/a24b00112c4adf842ed29f2eb2f7ada9)
+  * [Gist: root-ca.conf with additional comments](https://gist.github.com/kaito834/e1bf8b472212201335803ec480b5a788)
+- OpenSSL manuals
+  * [OpenSSL CONF library configuration files](https://www.openssl.org/docs/manmaster/man5/config.html)
+  * [CONFIGURATION FILE OPTIONS, ca, OpenSSL manual](https://www.openssl.org/docs/manmaster/man1/ca.html#CONFIGURATION-FILE-OPTIONS)
+  * [CONFIGURATION FILE FORMAT, req, OpenSSL manual](https://www.openssl.org/docs/manmaster/man1/req.html#CONFIGURATION-FILE-FORMAT)
+
 ## SSL/TLS Best Practice
 - [プロフェッショナル SSL/TLS](https://www.lambdanote.com/products/tls) (in Japanese)
   - Japanese Translation of "Bulletproof SSL and TLS", Ivan Ristić
