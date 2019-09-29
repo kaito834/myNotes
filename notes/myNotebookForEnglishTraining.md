@@ -428,6 +428,41 @@
   - notwithstanding the fact that ...「・・・という事実があるにもかかわらず」のように、前置詞的な使われ方もされます。
   - The global economy finally seems to be showing signs of recovery, but there have been a few dips in the stock market notwithstanding.
 
+### NHK ラジオ 入門ビジネス英語
+#### [2018年4月号](https://www.amazon.co.jp/dp/B079VDHVXB/)
+- Lesson 1: 新しい仕事仲間にあいさつする: I'm looking forward to working wiht you.
+  * Would you please say a few words of introduction, Moe?
+  * Welcome aboard, Moe. I'm sure your experience in publicity will be a great asset for our team.
+- Lesson 4: 仕事のやりがいについて尋ねる: How do you find your work?
+  * Did you get used to our team quickly?
+  * How do you find your work?
+    + How do you find life in Madrid?
+    + How do you like your current job?
+- Lesson 5: セミナーへの参加理由を尋ねる: What brought you to this seminar?
+  * Pleased to meet you., Emma. So, what brought you to this seminar?
+    + What brings you to this seminar?
+    + May I ask what brought you to this seminar?
+    + Why did you come to this conference?
+  * I'm a freelance e-commerce consultant, and I want to catch up with the latest trends. How about you, Moe?
+  * I'm an overseas marketing officer at Shibuya.com, based in Tokyo.
+- Lesson 6: 仕事の担当について答える: I'm in charge of expanding our business overseas.
+  * What are your responsibilities, Moe?
+  * I'm in charge of expanding our business overseas, especially in Asian countries.
+    + I'm in charge of the Compliance Department.
+      - *in charge of のあとに部署名が来ると、チームの責任者だということを表します*
+    + I'm responsible for the expansion of our overseas business.
+  * I got my new assignment just two weeks ago, and I'll be involved in a new project soon.
+  * I hope it'll be an exciting one.
+  * I'm sure you did!
+- Lesson 7: 今関わっている仕事について尋ねる: What kind of projects are you working on?
+  * That makes sense.
+  * Speaking of business opportunities, what kind of projects are you working on?
+    + What sort of projects are you involved in?
+    + be engaged in ～
+    + Speaking of food, what kind of Japanese foods have you tried so far?
+- Lesson 8: 知り合いを第三者に紹介する: Sam is an e-commerce blogger and a passionate jogger.
+  * Look who's here! Moe, it's been a long time.
+  * Sam! I didn't expect to see you here.
 
 ### Others
 #### [｢～と思う」の　の英語表現](http://d.hatena.ne.jp/nsishikata/20080327)
