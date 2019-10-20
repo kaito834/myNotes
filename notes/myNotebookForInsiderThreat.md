@@ -64,6 +64,9 @@
   * [PDF: 組織における内部不正防止ガイドライン（日本語版） 第4版](https://www.ipa.go.jp/files/000057060.pdf)
 - [IPA: 「企業の内部不正防止に関する緊急セミナー」開催のご案内 (最終更新: 2014年9月)](https://www.ipa.go.jp/security/event/2014/insider_semi_20140826.html)
   * [PDF: 内部不正の現状について　～国内外の内部不正の動向より～](https://www.ipa.go.jp/files/000041262.pdf)
+    + slide 12: 内部脅威への19のベストプラクティス, CERT® Best Practices Against Insider Threats in All Nations
+    + slide 22-23: CERTによる19のプラクティス
+      - slide 12 の詳細版
   * [PDF: 内部不正の実例とその対策　～内部不正防止ガイドラインより有効な対策を探る～](https://www.ipa.go.jp/files/000041263.pdf)
   * [PDF: 技術的に防止する　～JNSA内部不正対策ソリューションガイドより～](https://www.ipa.go.jp/files/000041264.pdf)
 - [IPA: 組織の内部関係者の不正行為による情報漏えいを防止するため、セキュリティ対策の見直しを！ (掲載: 2014年7月)](https://www.ipa.go.jp/security/announce/20140710-insider.html)
