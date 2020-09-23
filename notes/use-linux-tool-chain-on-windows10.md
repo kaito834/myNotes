@@ -21,4 +21,9 @@ This text is my notes to use Linux tool chain on Windows 10.
   * Help me to understand difference between MinGW and MSYS
 - [GnuWin](http://gnuwin32.sourceforge.net/)
   * Last update: 27-12-2010 10:15:32
+- [Microsoft Docs: Linux 用 Windows サブシステム (WSL) ディストリビューションを手動でダウンロードする](https://docs.microsoft.com/ja-jp/windows/wsl/install-manual) (in Japanese / May 28, 2020)
 - [Qiita: WSL (Windows Subsystem for Linux) をコマンドラインでインストールする](https://qiita.com/moriai/items/850ee91d60edc91e7b7e) (in Japanese / Last Update: Jun. 29, 2020)
+  * 下記の環境において、管理者権限における PowerShell: Add-AppxPackage コマンドレットで Kali をインストールしたところ、Kali を起動できない状況に陥った
+    + Windows 10 1809
+    + ローカル Administrator 権限を持たないユーザでログイン
+    + Administrator 権限が必要な場合、別のローカル Administrator ユーザで認証して権限昇格
